@@ -3,177 +3,183 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>B.M.B-XMD-V2 PAIR</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>HANSTZ_SESSIONS.SITE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* ===== Body na Background ya Teknolojia ===== */
     body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Orbitron', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
-      background: radial-gradient(ellipse at center, #0f2027, #203a43, #2c5364);
+      flex-direction: column;
+      background: url('https://i.ibb.co/mCZf28Nm/nexus-xmd.jpg') no-repeat center center;
+      background-size: auto; /* Keeps the original image size */
+      background-attachment: fixed;
       overflow: hidden;
-      font-family: Arial, sans-serif;
-      position: relative;
-      color: #fff;
-    }
-    body::before {
-      content: "";
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      top: -50%;
-      left: -50%;
-      background-image: repeating-linear-gradient(
-        0deg,
-        rgba(0, 255, 255, 0.05),
-        rgba(0, 255, 255, 0.05) 1px,
-        transparent 1px,
-        transparent 20px
-      );
-      animation: scrollBackground 20s linear infinite;
-      z-index: -1;
-    }
-    @keyframes scrollBackground {
-      from { transform: translateY(0); }
-      to   { transform: translateY(-50%); }
     }
 
-    /* ===== Container ===== */
-    .container {
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .box {
-      width: 300px;
-      height: 330px;
-      padding: 20px;
+    .frame {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.5);
-      border-radius: 10px;
-      position: relative;
+      max-width: 280px;
+      width: 100%;
     }
-    h2.centered-text,
-    h6,
-    .glowing-text {
-      color: #000;
+
+    .typing {
+      font-family: 'Playfair Display', serif;
+      color: #e9e4e4;
+      font-size: 1.1rem;
+      animation: colorChange 3s infinite;
+    }
+
+    @keyframes colorChange {
+      0% { color: red; }
+      25% { color: yellow; }
+      50% { color: green; }
+      75% { color: blue; }
+      100% { color: purple; }
     }
 
     .input-container {
+      margin-top: 15px;
       display: flex;
-      gap: 0.3rem;
-      max-width: 300px;
-      width: 100%;
-      background: linear-gradient(45deg, #c5c5c5 0%, #ffffff 100%);
-      padding: 0.3rem;
-      border-radius: 1rem;
-      margin: 1rem 0;
-    }
-    .input-container input {
-      flex: 1;
-      padding: 1rem;
-      background: #e8e8e8;
-      border: none;
-      border-radius: 0.8rem 0 0 0.8rem;
-      color: #5e5e5e;
-      border-left: 2px solid #ff9d9d;
-      transition: all 0.2s ease-in-out;
-    }
-    .input-container input:focus {
-      border-left-color: #ff9d9d;
-      outline: none;
-    }
-    .input-container button {
-      padding: 1rem;
-      background: linear-gradient(135deg, #8a2be2 0%, #800080 100%);
-      color: white;
-      border: none;
-      border-radius: 0 1rem 1rem 0;
-      text-transform: uppercase;
-      letter-spacing: 0.3rem;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-    }
-    .input-container button:hover {
-      background: linear-gradient(135deg, #A8E4A0 0%, #32CD32 100%);
-      color: red;
+      justify-content: center;
+      gap: 10px;
     }
 
-    /* ===== Glowing Footer Text ===== */
-    .glowing-text {
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-shadow:
-        0 0 5px #FF0000,
-        0 0 10px #FF0000,
-        0 0 15px #FF4500,
-        0 0 20px #FF4500,
-        0 0 25px #FF6347,
-        0 0 30px #FF6347;
-      animation: glow 2s infinite;
-      margin-top: 1rem;
+    .input-container input {
+      width: 160px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      background: #f1f1f1;
     }
-    @keyframes glow {
-      0%   { text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF4500, 0 0 20px #FF4500, 0 0 25px #FF6347, 0 0 30px #FF6347; }
-      50%  { text-shadow: 0 0 5px #32CD32, 0 0 10px #32CD32, 0 0 15px #32CD32, 0 0 20px #7CFC00, 0 0 25px #ADFF2F, 0 0 30px #ADFF2F; }
-      100% { text-shadow: 0 0 5px #1E90FF, 0 0 10px #1E90FF, 0 0 15px #00BFFF, 0 0 20px #00BFFF, 0 0 25px #87CEFA, 0 0 30px #87CEFA; }
+
+    .input-container button {
+      padding: 10px 12px;
+      background: red;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #waiting-message {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #ffcc00;
+      display: none;
+    }
+
+    #copy-btn {
+      display: none;
+      margin-top: 10px;
+      padding: 8px 12px;
+      font-size: 14px;
+      background-color: #222;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #play-btn {
+      margin-top: 15px;
+      padding: 8px 15px;
+      font-weight: bold;
+      background: #00cc66;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="box">
-      <i class="fa fa-user"></i>
-      <h2 class="centered-text">𝐁.𝐌.𝐁-𝐗𝐌𝐃 PAIR</h2>
-      <h6>⚙ Enter your number with country code. ⚙</h6>
-      <div class="input-container">
-        <input id="number" type="number" placeholder="2557678*****">
-        <button id="submit">ENTER</button>
-      </div>
-      <a id="waiting-message" class="centered-text" style="display:none;">in process...</a>
-      <main id="pair" class="centered-text"></main>
+
+  <div class="frame">
+    <p class="typing">WELCOME TO HANS_TZ PAIR SITE</p>
+
+    <div class="input-container">
+      <input placeholder="255760XXXX" type="number" id="number">
+      <button id="submit">SUBMIT</button>
     </div>
-    <div class="glowing-text">𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 DEV 𝐁.𝐌.𝐁-𝐗𝐌𝐃🔥😁</div>
+
+    <p id="waiting-message">Please Wait...</p>
+    <button id="copy-btn">📋 Copy Code</button>
+    <button id="play-btn">▶️ Play Song</button>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+  <audio id="background-audio">
+    <source src="https://github.com/Mrhanstz/HANS-XMD_V3/raw/refs/heads/main/Hans-Tz/HansTz.mp3" type="audio/mp3">
+  </audio>
+
   <script>
-    const a = document.getElementById("pair");
-    const b = document.getElementById("submit");
-    const c = document.getElementById("number");
+    const msg = document.getElementById("waiting-message");
+    const submitBtn = document.getElementById("submit");
+    const numberInput = document.getElementById("number");
+    const copyBtn = document.getElementById("copy-btn");
+    const audio = document.getElementById("background-audio");
+    const playBtn = document.getElementById("play-btn");
 
-    async function Copy() {
-      const obj = document.getElementById("copy");
-      const text = obj.innerText;
-      await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
-      obj.innerText = "COPIED";
-      obj.style.color = "blue";
-      setTimeout(() => {
-        obj.innerText = text;
-        obj.style.color = "black";
-      }, 500);
-    }
-
-    b.addEventListener("click", async (e) => {
+    submitBtn.addEventListener("click", async (e) => {
       e.preventDefault();
-      if (!c.value) {
-        a.innerHTML = '<a style="color:black;font-weight:bold">❗Enter your WhatsApp number with country code.</a><br><br>';
-      } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
-        a.innerHTML = '<a style="color:black;font-weight:bold">❌Invalid number format❌</a><br><br>';
-      } else {
-        const bc = c.value.replace(/[^0-9]/g, "");
-        c.type = "text";
-        c.value = "+" + bc;
-        a.innerHTML = '<a style="color:black;font-weight:bold">Please wait🔎</a><br><br>';
-        const { data } = await axios(`/code?number=${bc}`);
+      const value = numberInput.value.replace(/[^0-9]/g, "");
+
+      if (!value) {
+        msg.innerText = "Enter your WhatsApp number with Country Code";
+        msg.style.color = "white";
+        msg.style.display = "block";
+        copyBtn.style.display = "none";
+        return;
+      }
+
+      if (value.length < 11) {
+        msg.innerText = "Invalid Number";
+        msg.style.color = "red";
+        msg.style.display = "block";
+        copyBtn.style.display = "none";
+        return;
+      }
+
+      msg.innerText = "Please Wait...";
+      msg.style.color = "#ffcc00";
+      msg.style.display = "block";
+
+      try {
+        const res = await fetch(`/code?number=${value}`);
+        const data = await res.json();
         const code = data.code || "Service Unavailable";
-        a.innerHTML = `<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:black;font-weight:bold">${code}</span></font><br><br>`;
+
+        msg.innerText = "CODE: " + code;
+        msg.style.color = "white";
+
+        copyBtn.style.display = "inline-block";
+        copyBtn.onclick = () => {
+          navigator.clipboard.writeText(code);
+          copyBtn.innerText = "✅ Copied!";
+          setTimeout(() => (copyBtn.innerText = "📋 Copy Code"), 2000);
+        };
+      } catch (err) {
+        msg.innerText = "Error fetching code.";
+        msg.style.color = "red";
+        copyBtn.style.display = "none";
       }
     });
+
+    playBtn.addEventListener("click", () => {
+      audio.play();
+    });
   </script>
+
 </body>
-  </html>
+</html>
