@@ -3,185 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>B.M.B-XMD</title>
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>B.M.B-XMD-V2 PAIR</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    :root {
-      --text-color: #ffffff;
-      --border-color: rgba(0, 247, 255, 0.2);
-    }
-
-    * {
+    /* ===== Body na Background ya Teknolojia ===== */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: 'Inter', sans-serif;
-      background: #000;
-      color: var(--text-color);
+      background: radial-gradient(ellipse at center, #0f2027, #203a43, #2c5364);
       overflow: hidden;
-    }
-
-    #matrixCanvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-
-    .container {
+      font-family: Arial, sans-serif;
       position: relative;
+      color: #fff;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background-image: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 255, 0.05),
+        rgba(0, 255, 255, 0.05) 1px,
+        transparent 1px,
+        transparent 20px
+      );
+      animation: scrollBackground 20s linear infinite;
+      z-index: -1;
+    }
+    @keyframes scrollBackground {
+      from { transform: translateY(0); }
+      to   { transform: translateY(-50%); }
+    }
+
+    /* ===== Container ===== */
+    .container {
       z-index: 1;
-      max-width: 400px;
-      margin: auto;
-      margin-top: 50px;
-      padding: 25px;
-      border-radius: 16px;
-      border: 1px solid var(--border-color);
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 0 20px rgba(0, 247, 255, 0.4);
-      animation: floatUpDown 5s ease-in-out infinite alternate;
-    }
-
-    @keyframes floatUpDown {
-      0% { transform: translateY(0px) rotate(0deg); }
-      100% { transform: translateY(-20px) rotate(360deg); }
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: url('https://files.catbox.moe/p0xeh3.jpg') center/cover no-repeat;
-      margin: 0 auto 16px;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 10px rgba(0, 247, 255, 0.8); }
-      50% { box-shadow: 0 0 25px rgba(0, 247, 255, 1); }
-    }
-
-    .title {
-      font-size: 24px;
-      font-weight: 700;
-      background: linear-gradient(270deg, #00f7ff, #00cfff, #00f7ff);
-      background-size: 600% 100%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: animateTitle 4s linear infinite;
-    }
-
-    @keyframes animateTitle {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .button-container {
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      margin-top: 25px;
-    }
-
-    .button {
-      display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 12px;
-      font-size: 15px;
-      font-weight: bold;
-      border: 1.5px solid var(--border-color);
-      border-radius: 12px;
-      background: rgba(255,255,255,0.1);
-      text-decoration: none;
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      background-image: linear-gradient(270deg, #00f7ff, #00aaff, #00f7ff);
-      background-size: 400% 100%;
-      animation: animateBtn 6s linear infinite;
     }
-
-    .button i {
-      color: #00f7ff;
-      margin-right: 10px;
-    }
-
-    @keyframes animateBtn {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .footer {
+    .box {
+      width: 300px;
+      height: 330px;
+      padding: 20px;
       text-align: center;
-      margin-top: 25px;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+      position: relative;
+    }
+    h2.centered-text,
+    h6,
+    .glowing-text {
+      color: #000;
+    }
+
+    .input-container {
+      display: flex;
+      gap: 0.3rem;
+      max-width: 300px;
+      width: 100%;
+      background: linear-gradient(45deg, #c5c5c5 0%, #ffffff 100%);
+      padding: 0.3rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+    }
+    .input-container input {
+      flex: 1;
+      padding: 1rem;
+      background: #e8e8e8;
+      border: none;
+      border-radius: 0.8rem 0 0 0.8rem;
+      color: #5e5e5e;
+      border-left: 2px solid #ff9d9d;
+      transition: all 0.2s ease-in-out;
+    }
+    .input-container input:focus {
+      border-left-color: #ff9d9d;
+      outline: none;
+    }
+    .input-container button {
+      padding: 1rem;
+      background: linear-gradient(135deg, #8a2be2 0%, #800080 100%);
+      color: white;
+      border: none;
+      border-radius: 0 1rem 1rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    .input-container button:hover {
+      background: linear-gradient(135deg, #A8E4A0 0%, #32CD32 100%);
+      color: red;
+    }
+
+    /* ===== Glowing Footer Text ===== */
+    .glowing-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-shadow:
+        0 0 5px #FF0000,
+        0 0 10px #FF0000,
+        0 0 15px #FF4500,
+        0 0 20px #FF4500,
+        0 0 25px #FF6347,
+        0 0 30px #FF6347;
+      animation: glow 2s infinite;
+      margin-top: 1rem;
+    }
+    @keyframes glow {
+      0%   { text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF4500, 0 0 20px #FF4500, 0 0 25px #FF6347, 0 0 30px #FF6347; }
+      50%  { text-shadow: 0 0 5px #32CD32, 0 0 10px #32CD32, 0 0 15px #32CD32, 0 0 20px #7CFC00, 0 0 25px #ADFF2F, 0 0 30px #ADFF2F; }
+      100% { text-shadow: 0 0 5px #1E90FF, 0 0 10px #1E90FF, 0 0 15px #00BFFF, 0 0 20px #00BFFF, 0 0 25px #87CEFA, 0 0 30px #87CEFA; }
     }
   </style>
 </head>
 <body>
-<canvas id="matrixCanvas"></canvas>
-<div class="container">
-  <div class="header">
-    <div class="logo"></div>
-    <h1 class="title">B.M.B-XMD SESSION_ID</h1>
+  <div class="container">
+    <div class="box">
+      <i class="fa fa-user"></i>
+      <h2 class="centered-text">𝐁.𝐌.𝐁-𝐗𝐌𝐃 PAIR</h2>
+      <h6>⚙ Enter your number with country code. ⚙</h6>
+      <div class="input-container">
+        <input id="number" type="number" placeholder="2557678*****">
+        <button id="submit">ENTER</button>
+      </div>
+      <a id="waiting-message" class="centered-text" style="display:none;">in process...</a>
+      <main id="pair" class="centered-text"></main>
+    </div>
+    <div class="glowing-text">𝐏𝐎𝐖𝐄𝐑𝐄𝐃 𝐁𝐘 DEV 𝐁.𝐌.𝐁-𝐗𝐌𝐃🔥😁</div>
   </div>
-  <div class="button-container">
-    <a href="/qr" class="button" target="_blank"><i class="fas fa-qrcode"></i>QR CODE</a>
-    <a href="/pair" class="button" target="_blank"><i class="fas fa-link"></i>PAIRING CODE</a>
-    <a href="https://github.com/bmbtech11/B.M.B-XMD/fork" class="button" target="_blank"><i class="fas fa-code-branch"></i>FORK BOT</a>
-    <a href="https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z" class="button" target="_blank"><i class="fab fa-whatsapp"></i>WHATSAPP</a>
-    <a href="https://github.com/bmbtech11/B.M.B-XMD" class="button" target="_blank"><i class="fas fa-bug"></i>REPORT ERROR</a>
-  </div>
-  <div class="footer">
-    𝗕.𝗠.𝗕-𝗧𝗘𝗖𝗛 &copy; <span id="currentYear"></span>
-  </div>
-</div>
-<script>
-  document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-  const canvas = document.getElementById("matrixCanvas");
-  const ctx = canvas.getContext("2d");
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+  <script>
+    const a = document.getElementById("pair");
+    const b = document.getElementById("submit");
+    const c = document.getElementById("number");
 
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
-  const fontSize = 14;
-  const columns = canvas.width / fontSize;
-  const drops = Array.from({ length: columns }).fill(1);
-
-  function drawMatrix() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#00f7ff";
-    ctx.font = fontSize + "px monospace";
-    for (let i = 0; i < drops.length; i++) {
-      const text = letters.charAt(Math.floor(Math.random() * letters.length));
-      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
-      }
-      drops[i]++;
+    async function Copy() {
+      const obj = document.getElementById("copy");
+      const text = obj.innerText;
+      await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
+      obj.innerText = "COPIED";
+      obj.style.color = "blue";
+      setTimeout(() => {
+        obj.innerText = text;
+        obj.style.color = "black";
+      }, 500);
     }
-  }
-  setInterval(drawMatrix, 33);
-</script>
+
+    b.addEventListener("click", async (e) => {
+      e.preventDefault();
+      if (!c.value) {
+        a.innerHTML = '<a style="color:black;font-weight:bold">❗Enter your WhatsApp number with country code.</a><br><br>';
+      } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
+        a.innerHTML = '<a style="color:black;font-weight:bold">❌Invalid number format❌</a><br><br>';
+      } else {
+        const bc = c.value.replace(/[^0-9]/g, "");
+        c.type = "text";
+        c.value = "+" + bc;
+        a.innerHTML = '<a style="color:black;font-weight:bold">Please wait🔎</a><br><br>';
+        const { data } = await axios(`/code?number=${bc}`);
+        const code = data.code || "Service Unavailable";
+        a.innerHTML = `<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:black;font-weight:bold">${code}</span></font><br><br>`;
+      }
+    });
+  </script>
 </body>
-</html>
+  </html>
