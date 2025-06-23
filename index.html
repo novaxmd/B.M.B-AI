@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>B.M.B-XMD</title>
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
       --text-color: #ffffff;
@@ -68,26 +66,26 @@
       margin: 0 auto 16px;
       background: url('https://files.catbox.moe/p0xeh3.jpg') center/cover no-repeat;
       border-radius: 50%;
-      animation: spinBounce 3s infinite ease-in-out;
+      animation: spinOnce 5s ease-in-out 1;
     }
 
-    @keyframes spinBounce {
+    @keyframes spinOnce {
       0% {
-        transform: rotate(0deg) translateY(0px);
+        transform: rotate(0deg) translateY(0);
         box-shadow: 0 0 10px rgba(0, 247, 255, 0.8);
       }
       25% {
         transform: rotate(90deg) translateY(-10px);
       }
       50% {
-        transform: rotate(180deg) translateY(0px);
+        transform: rotate(180deg) translateY(0);
         box-shadow: 0 0 25px rgba(0, 247, 255, 1);
       }
       75% {
         transform: rotate(270deg) translateY(10px);
       }
       100% {
-        transform: rotate(360deg) translateY(0px);
+        transform: rotate(360deg) translateY(0);
         box-shadow: 0 0 10px rgba(0, 247, 255, 0.8);
       }
     }
@@ -96,11 +94,11 @@
       font-size: 24px;
       font-weight: 700;
       margin-bottom: 8px;
-      background: linear-gradient(270deg, #00f7ff, #0088ff, #00f7ff);
-      background-size: 600% 600%;
+      background: linear-gradient(270deg, #ffffff, #00cfff, #0077ff, #00f7ff);
+      background-size: 1000% 1000%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: gradientText 4s ease infinite;
+      animation: gradientText 5s ease infinite;
     }
 
     @keyframes gradientText {
@@ -131,9 +129,20 @@
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      background-image: linear-gradient(90deg, #00f7ff, #0088ff, #00f7ff);
+      background-image: linear-gradient(90deg, #00cfff, #00eaff, #00aaff, #00cfff);
       background-size: 400%;
-      animation: animateText 5s linear infinite;
+      animation: animateText 3s linear infinite, bounceUpDown 2s ease-in-out infinite;
+    }
+
+    @keyframes animateText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes bounceUpDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
 
     .button i {
@@ -145,12 +154,6 @@
       box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
     }
 
-    @keyframes animateText {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
     .footer {
       text-align: center;
       margin-top: 25px;
@@ -160,66 +163,60 @@
   </style>
 </head>
 <body>
-<canvas id="matrixCanvas"></canvas>
-
-<div class="container">
-  <div class="header">
-    <div class="logo"></div>
-    <h1 class="title">B.M.B-XMD SESSION_ID</h1>
+  <canvas id="matrixCanvas"></canvas>
+  <div class="container">
+    <div class="header">
+      <div class="logo"></div>
+      <h1 class="title">B.M.B-XMD SESSION_ID</h1>
+    </div>
+    <div class="button-container">
+      <a href="/qr" class="button" target="_blank">
+        <i class="fas fa-qrcode"></i> QR CODE
+      </a>
+      <a href="/pair" class="button" target="_blank">
+        <i class="fas fa-link"></i> PAIRING CODE
+      </a>
+      <a href="https://github.com/bmbtech11/B.M.B-XMD/fork" class="button" target="_blank">
+        <i class="fas fa-code-branch"></i> FORK BOT
+      </a>
+      <a href="https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z" class="button" target="_blank">
+        <i class="fab fa-whatsapp"></i> WHATSAPP
+      </a>
+      <a href="https://github.com/bmbtech11/B.M.B-XMD" class="button" target="_blank">
+        <i class="fas fa-bug"></i> REPORT ERROR
+      </a>
+    </div>
+    <div class="footer">
+      𝗕.𝗠.𝗕-𝗧𝗘𝗖𝗛 &copy; <span id="currentYear"></span>
+    </div>
   </div>
 
-  <div class="button-container">
-    <a href="/qr" class="button" target="_blank">
-      <i class="fas fa-qrcode"></i> QR CODE
-    </a>
-    <a href="/pair" class="button" target="_blank">
-      <i class="fas fa-link"></i> PAIRING CODE
-    </a>
-    <a href="https://github.com/bmbtech11/B.M.B-XMD/fork" class="button" target="_blank">
-      <i class="fas fa-code-branch"></i> FORK BOT
-    </a>
-    <a href="https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z" class="button" target="_blank">
-      <i class="fab fa-whatsapp"></i> WHATSAPP
-    </a>
-    <a href="https://github.com/bmbtech11/B.M.B-XMD" class="button" target="_blank">
-      <i class="fas fa-bug"></i> REPORT ERROR
-    </a>
-  </div>
+  <script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    const canvas = document.getElementById("matrixCanvas");
+    const ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array.from({ length: columns }).fill(1);
 
-  <div class="footer">
-    𝗕.𝗠.𝗕-𝗧𝗘𝗖𝗛 &copy; <span id="currentYear"></span>
-  </div>
-</div>
-
-<script>
-  document.getElementById("currentYear").textContent = new Date().getFullYear();
-
-  const canvas = document.getElementById("matrixCanvas");
-  const ctx = canvas.getContext("2d");
-  canvas.height = window.innerHeight;
-  canvas.width = window.innerWidth;
-
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
-  const fontSize = 14;
-  const columns = canvas.width / fontSize;
-  const drops = Array.from({ length: columns }).fill(1);
-
-  function drawMatrix() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#00f7ff";
-    ctx.font = fontSize + "px monospace";
-
-    for (let i = 0; i < drops.length; i++) {
-      const text = letters.charAt(Math.floor(Math.random() * letters.length));
-      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-        drops[i] = 0;
+    function drawMatrix() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#00f7ff";
+      ctx.font = fontSize + "px monospace";
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
       }
-      drops[i]++;
     }
-  }
-  setInterval(drawMatrix, 33);
-</script>
+    setInterval(drawMatrix, 33);
+  </script>
 </body>
-</html>
+  </html>
