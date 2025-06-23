@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KHAN MD</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    :root {
+      --primary-color: #00f7ff; /* Neon Cyan */
+      --secondary-color: #000000;
+      --accent-color: #1a1a1a;
+      --text-color: #ffffff;
+      --background-color: #0a0a0a;
+      --hover-color: #222222;
+      --border-color: rgba(0, 247, 255, 0.2);
+      --neon-glow: 0 0 10px rgba(0, 247, 255, 0.8),
+                   0 0 20px rgba(0, 247, 255, 0.6),
+                   0 0 30px rgba(0, 247, 255, 0.4);
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -12,185 +28,132 @@
     }
 
     body {
+      font-family: 'Inter', sans-serif;
+      background: var(--background-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      background: var(--accent-color);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: var(--neon-glow);
+      border: 1px solid var(--border-color);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 16px;
+      background: var(--primary-color);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      background: #111;
-      font-family: 'Roboto', sans-serif;
-      color: white;
-      overflow: hidden;
-      position: relative;
+      font-size: 32px;
+      color: var(--secondary-color);
+      box-shadow: var(--neon-glow);
+      animation: pulse 2s infinite;
     }
 
-    /* Background Particles */
-    #particles-js {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 10px rgba(0, 247, 255, 0.8); }
+      50% { box-shadow: 0 0 25px rgba(0, 247, 255, 1); }
     }
 
-    /* Frame */
-    .frame {
-      width: 90%;
-      max-width: 400px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      backdrop-filter: blur(8px);
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-      position: relative;
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--primary-color);
+      text-shadow: 0 0 5px rgba(0, 247, 255, 0.7);
     }
 
-    /* Typing effect with smooth right to left at 64fps */
-    .typing-effect {
-      font-size: 18px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 100%;
-      position: relative;
-      display: inline-block;
-      animation: typing 10s steps(50) infinite, randomColor 10s linear infinite;
-    }
-
-    /* Smooth typing animation */
-    @keyframes typing {
-      0% { width: 0%; }
-      100% { width: 100%; }
-    }
-
-    /* Random color effect */
-    @keyframes randomColor {
-      0% { color: #FF4500; }
-      25% { color: #4caf50; }
-      50% { color: #1e90ff; }
-      75% { color: #ff9800; }
-      100% { color: #9c27b0; }
-    }
-
-    /* 3D Button Styles */
-    .btn {
-      padding: 12px;
-      font-size: 14px;
-      font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      background-color: #4caf50;
-      transition: background-color 3.6s ease, box-shadow 0.6s ease, transform 0.6s ease;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      transform: perspective(500px) rotateX(0deg) rotateY(0deg);
-    }
-
-    /* Hover effect to make buttons look 3D */
-    .btn:hover {
-      transform: perspective(500px) rotateX(10deg) rotateY(10deg);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Button grid */
     .button-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 25px;
     }
 
-    /* 3D Button random color change */
-    @keyframes buttonColorChange {
-      0% { background-color: #FF4500; }
-      25% { background-color: #4caf50; }
-      50% { background-color: #1e90ff; }
-      75% { background-color: #ff9800; }
-      100% { background-color: #9c27b0; }
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: bold;
+      color: var(--text-color);
+      border: 1.5px solid var(--border-color);
+      border-radius: 12px;
+      background: var(--hover-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
 
+    .button:hover {
+      background: rgba(0, 247, 255, 0.1);
+      border-color: var(--primary-color);
+      box-shadow: 0 0 15px rgba(0, 247, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .button i {
+      font-size: 17px;
+      color: var(--primary-color);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
   </style>
 </head>
 <body>
-
-  <div id="particles-js"></div>
-
-  <div class="frame">
-    <div class="typing-effect">
-      <span>WELCOME TO THE HANS_TECH</span>
+  <div class="container">
+    <div class="header">
+      <div class="logo"><i class="fas fa-robot"></i></div>
+      <h1 class="title">MAFIA MD SESSION SELECTION</h1>
     </div>
-
     <div class="button-container">
-      <button onclick="window.open(`/pair`)" class="btn">Pair Code</button>
-      <button onclick="window.open(`https://github.com/Mrhanstz/HANS-XMD_V2`)" class="btn">HANS-XMD_V3</button>
-      <button onclick="window.open(`https://github.com/Mrhanstz/VORTEX-XMD`)" class="btn">VORTEX-XMD-BOT</button>
-      <button onclick="window.open(`https://www.youtube.com/@HANSTZ-TECH`)" class="btn">YOUTUBE</button>
-      <button onclick="window.open(`https://wa.me/+255756530143`)" class="btn">CONTACT</button>
-      <button onclick="window.open(`https://whatsapp.com/channel/0029VasiOoR3bbUw5aV4qB31`)" class="btn">Channel-2</button>
+      <a href="/qr" class="button" target="_blank">
+        <i class="fas fa-qrcode"></i> QR CODE
+      </a>
+      <a href="/pair" class="button" target="_blank">
+        <i class="fas fa-link"></i> PAIRING CODE
+      </a>
+      <a href="https://github.com/MAFIAADEEL/MAFIA-MD/fork" class="button" target="_blank">
+        <i class="fas fa-code-branch"></i> FORK BOT
+      </a>
+      <a href="https://whatsapp.com/channel/0029VavP4nX0G0XggHzhVg0R" class="button" target="_blank">
+        <i class="fab fa-whatsapp"></i> WHATSAPP
+      </a>
+      <a href="https://github.com/MAFIAADEEL" class="button" target="_blank">
+        <i class="fas fa-bug"></i> REPORT ERROR
+      </a>
     </div>
+    <div class="footer">
+      MAFIA-MD &copy; <span id="currentYear"></span>
+    </div>
+  </div>
 
-  
   <script>
-    // Initialize ParticlesJS
-    particlesJS('particles-js', {
-      "particles": {
-        "number": { "value": 120, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#FF4500" },
-        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000" } },
-        "opacity": { "value": 0.4, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 } },
-        "size": { "value": 5, "random": true, "anim": { "enable": true, "speed": 10, "size_min": 0.1 } },
-        "line_linked": { "enable": true, "distance": 120, "color": "#FF4500", "opacity": 0.3, "width": 1 },
-        "move": { "enable": true, "speed": 5, "random": true }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } }
-      },
-      "retina_detect": true
-    });
-
-    // Function to change button colors smoothly with mix of last color
-    function getRandomColor() {
-      const colors = ["#FF4500", "#4caf50", "#1e90ff", "#ff9800", "#9c27b0", "#f44336", "#00bcd4", "#ffeb3b"];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-
-    // Function to apply unique colors to each button
-    function changeButtonColors() {
-      const buttons = document.querySelectorAll('.btn');
-      buttons.forEach(button => {
-        const newColor = getRandomColor();
-        button.style.transition = "background-color 3.6s ease";
-        button.style.backgroundColor = newColor;
-      });
-    }
-
-    // Change button colors every 3.6 seconds with different colors for each button
-    setInterval(changeButtonColors, 3600);
-
-    // Background music logic
-    const audio = document.getElementById('background-audio');
-
-    // Play audio automatically when the page loads
-    window.addEventListener("load", () => {
-      audio.play().catch(error => {
-        console.log("Autoplay blocked: User interaction needed");
-        // Try again after a short delay if autoplay is blocked
-        setTimeout(() => audio.play(), 1000);
-      });
-    });
-
-    // Allow user interaction to trigger audio if autoplay is blocked
-    document.addEventListener("click", () => {
-      audio.play().catch(error => console.log("Autoplay still blocked, waiting for user interaction"));
-    });
-
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
