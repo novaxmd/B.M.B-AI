@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,141 +10,144 @@
     :root {
       --text-color: #ffffff;
       --border-color: rgba(0, 247, 255, 0.2);
-    }
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+}
 
-    html, body {
-      height: 100%;
-      font-family: 'Inter', sans-serif;
-    }
+body {
+  background: #000;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
 
-    body {
-      background: linear-gradient(-45deg, #002bff, #005eff, #007bff, #3399ff);
-      background-size: 400% 400%;
-      animation: gradientBG 10s ease infinite;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: var(--text-color);
-      overflow: hidden;
-      padding: 20px;
-    }
+#matrixCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 0 25px rgba(0, 247, 255, 0.4);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(8px);
+}
 
-    .container {
-      width: 100%;
-      max-width: 400px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 0 25px rgba(0, 247, 255, 0.4);
-      border: 1px solid var(--border-color);
-      backdrop-filter: blur(8px);
-    }
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-    .header {
-      text-align: center;
-      margin-bottom: 25px;
-    }
+.logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  background: #00f7ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #000;
+  animation: pulse 2s infinite;
+}
 
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 16px;
-      background: #00f7ff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      color: #000;
-      animation: pulse 2s infinite;
-    }
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 247, 255, 0.8); }
+  50% { box-shadow: 0 0 25px rgba(0, 247, 255, 1); }
+}
 
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 10px rgba(0, 247, 255, 0.8); }
-      50% { box-shadow: 0 0 25px rgba(0, 247, 255, 1); }
-    }
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  background: linear-gradient(270deg, #ff00c8, #00fff7, #00ff2a, #faff00, #ff00c8);
+  background-size: 1000% 1000%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 5s ease infinite;
+}
 
-    .title {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      background: linear-gradient(270deg, #ff00c8, #00fff7, #00ff2a, #faff00, #ff00c8);
-      background-size: 1000% 1000%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradientText 5s ease infinite;
-    }
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    @keyframes gradientText {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 25px;
+}
 
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-top: 25px;
-    }
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1.5px solid var(--border-color);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  text-decoration: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #ff00c8, #00fff7, #00ff2a, #faff00, #ff00c8);
+  background-size: 400%;
+  animation: animateText 6s linear infinite;
+}
 
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px;
-      font-size: 15px;
-      font-weight: bold;
-      border: 1.5px solid var(--border-color);
-      border-radius: 12px;
-      background: rgba(255,255,255,0.1);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      background-image: linear-gradient(90deg, #ff00c8, #00fff7, #00ff2a, #faff00, #ff00c8);
-      background-size: 400%;
-      animation: animateText 6s linear infinite;
-    }
+.button i {
+  color: #00f7ff;
+}
 
-    .button i {
-      color: #00f7ff;
-    }
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+}
 
-    .button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
-    }
+@keyframes animateText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    @keyframes animateText {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+.footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
 
-    .footer {
-      text-align: center;
-      margin-top: 25px;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.5);
-    }
   </style>
 </head>
 <body>
+<canvas id="matrixCanvas"></canvas>
   <div class="container">
     <div class="header">
       <div class="logo"><i class="fas fa-robot"></i></div>
@@ -172,9 +174,33 @@
       MAFIA-MD &copy; <span id="currentYear"></span>
     </div>
   </div>
-
   <script>
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    document.getElementById("currentYear").textContent = new Date().getFullYear();const canvas = document.getElementById("matrixCanvas");
+const ctx = canvas.getContext("2d");
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+const fontSize = 14;
+const columns = canvas.width / fontSize;
+const drops = Array.from({ length: columns }).fill(1);
+
+function drawMatrix() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#00f7ff";
+  ctx.font = fontSize + "px monospace";
+  for (let i = 0; i < drops.length; i++) {
+    const text = letters.charAt(Math.floor(Math.random() * letters.length));
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      drops[i] = 0;
+    }
+    drops[i]++;
+  }
+}
+setInterval(drawMatrix, 33);
+
   </script>
 </body>
-                        </html>
+  </html>
