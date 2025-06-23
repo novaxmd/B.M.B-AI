@@ -9,7 +9,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
-      --primary-color: #00f7ff; /* Neon Cyan */
+      --primary-color: #00f7ff;
       --secondary-color: #000000;
       --accent-color: #1a1a1a;
       --text-color: #ffffff;
@@ -27,15 +27,28 @@
       box-sizing: border-box;
     }
 
-    body {
+    body, html {
+      height: 100%;
       font-family: 'Inter', sans-serif;
       background: var(--background-color);
-      color: var(--text-color);
-      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    body {
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 15px;
+      color: var(--text-color);
     }
 
     .container {
@@ -77,8 +90,18 @@
       font-size: 24px;
       font-weight: 700;
       margin-bottom: 8px;
-      color: var(--primary-color);
-      text-shadow: 0 0 5px rgba(0, 247, 255, 0.7);
+      background: linear-gradient(270deg, #ff00c8, #00fff7, #00ff2a, #faff00, #ff00c8);
+      background-size: 1000% 1000%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 5s ease infinite;
+      text-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+    }
+
+    @keyframes gradientText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .button-container {
@@ -125,6 +148,8 @@
   </style>
 </head>
 <body>
+  <div id="particles-js"></div>
+  
   <div class="container">
     <div class="header">
       <div class="logo"><i class="fas fa-robot"></i></div>
@@ -154,6 +179,55 @@
 
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Load particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#00f7ff" },
+        "shape": { "type": "circle" },
+        "opacity": {
+          "value": 0.5,
+          "random": false
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#00f7ff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100, "duration": 0.4 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
   </script>
 </body>
   </html>
