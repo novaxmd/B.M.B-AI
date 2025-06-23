@@ -9,16 +9,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
-      --primary-color: #00f7ff;
-      --secondary-color: #000000;
-      --accent-color: #1a1a1a;
       --text-color: #ffffff;
-      --background-color: #0a0a0a;
-      --hover-color: #222222;
       --border-color: rgba(0, 247, 255, 0.2);
-      --neon-glow: 0 0 10px rgba(0, 247, 255, 0.8),
-                   0 0 20px rgba(0, 247, 255, 0.6),
-                   0 0 30px rgba(0, 247, 255, 0.4);
     }
 
     * {
@@ -27,38 +19,38 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
       font-family: 'Inter', sans-serif;
-      background: var(--background-color);
-      overflow: hidden;
-    }
-
-    #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
     }
 
     body {
+      background: linear-gradient(-45deg, #002bff, #005eff, #007bff, #3399ff);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 15px;
       color: var(--text-color);
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .container {
       width: 100%;
       max-width: 400px;
-      background: var(--accent-color);
+      background: rgba(0, 0, 0, 0.5);
       border-radius: 16px;
       padding: 25px;
-      box-shadow: var(--neon-glow);
+      box-shadow: 0 0 25px rgba(0, 247, 255, 0.4);
       border: 1px solid var(--border-color);
+      backdrop-filter: blur(8px);
     }
 
     .header {
@@ -70,14 +62,13 @@
       width: 80px;
       height: 80px;
       margin: 0 auto 16px;
-      background: var(--primary-color);
+      background: #00f7ff;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 32px;
-      color: var(--secondary-color);
-      box-shadow: var(--neon-glow);
+      color: #000;
       animation: pulse 2s infinite;
     }
 
@@ -95,7 +86,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: gradientText 5s ease infinite;
-      text-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
     }
 
     @keyframes gradientText {
@@ -119,24 +109,32 @@
       padding: 12px;
       font-size: 15px;
       font-weight: bold;
-      color: var(--text-color);
       border: 1.5px solid var(--border-color);
       border-radius: 12px;
-      background: var(--hover-color);
+      background: rgba(255,255,255,0.1);
       text-decoration: none;
       transition: all 0.3s ease;
-    }
-
-    .button:hover {
-      background: rgba(0, 247, 255, 0.1);
-      border-color: var(--primary-color);
-      box-shadow: 0 0 15px rgba(0, 247, 255, 0.4);
-      transform: translateY(-2px);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(90deg, #ff00c8, #00fff7, #00ff2a, #faff00, #ff00c8);
+      background-size: 400%;
+      animation: animateText 6s linear infinite;
     }
 
     .button i {
-      font-size: 17px;
-      color: var(--primary-color);
+      color: #00f7ff;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+    }
+
+    @keyframes animateText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .footer {
@@ -148,8 +146,6 @@
   </style>
 </head>
 <body>
-  <div id="particles-js"></div>
-  
   <div class="container">
     <div class="header">
       <div class="logo"><i class="fas fa-robot"></i></div>
@@ -180,54 +176,5 @@
   <script>
     document.getElementById("currentYear").textContent = new Date().getFullYear();
   </script>
-
-  <!-- Load particles.js -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 80,
-          "density": { "enable": true, "value_area": 800 }
-        },
-        "color": { "value": "#00f7ff" },
-        "shape": { "type": "circle" },
-        "opacity": {
-          "value": 0.5,
-          "random": false
-        },
-        "size": {
-          "value": 3,
-          "random": true
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#00f7ff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "bounce": false
-        }
-      },
-      "interactivity": {
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" },
-          "onclick": { "enable": true, "mode": "push" }
-        },
-        "modes": {
-          "repulse": { "distance": 100, "duration": 0.4 },
-          "push": { "particles_nb": 4 }
-        }
-      },
-      "retina_detect": true
-    });
-  </script>
 </body>
-  </html>
+                        </html>
