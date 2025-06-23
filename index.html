@@ -7,29 +7,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      height: 100%;
       font-family: 'Orbitron', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background: url('https://i.ibb.co/mCZf28Nm/nexus-xmd.jpg') no-repeat center center;
-      background-size: auto; /* Keeps the original image size */
-      background-attachment: fixed;
       overflow: hidden;
+    }
+
+    body {
+      background: #000;
+    }
+
+    canvas#tech-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
     }
 
     .frame {
       background: rgba(0, 0, 0, 0.8);
       padding: 25px;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
       text-align: center;
       max-width: 280px;
       width: 100%;
+      margin: auto;
+      position: relative;
+      top: 20%;
     }
 
     .typing {
@@ -42,9 +49,9 @@
     @keyframes colorChange {
       0% { color: red; }
       25% { color: yellow; }
-      50% { color: green; }
-      75% { color: blue; }
-      100% { color: purple; }
+      50% { color: cyan; }
+      75% { color: lime; }
+      100% { color: magenta; }
     }
 
     .input-container {
@@ -106,80 +113,143 @@
 </head>
 <body>
 
-  <div class="frame">
-    <p class="typing">WELCOME TO HANS_TZ PAIR SITE</p>
+<canvas id="tech-bg"></canvas>
 
-    <div class="input-container">
-      <input placeholder="255760XXXX" type="number" id="number">
-      <button id="submit">SUBMIT</button>
-    </div>
+<div class="frame">
+  <p class="typing">WELCOME TO HANS_TZ PAIR SITE</p>
 
-    <p id="waiting-message">Please Wait...</p>
-    <button id="copy-btn">📋 Copy Code</button>
-    <button id="play-btn">▶️ Play Song</button>
+  <div class="input-container">
+    <input placeholder="255760XXXX" type="number" id="number">
+    <button id="submit">SUBMIT</button>
   </div>
 
-  <audio id="background-audio">
-    <source src="https://github.com/Mrhanstz/HANS-XMD_V3/raw/refs/heads/main/Hans-Tz/HansTz.mp3" type="audio/mp3">
-  </audio>
+  <p id="waiting-message">Please Wait...</p>
+  <button id="copy-btn">📋 Copy Code</button>
+  <button id="play-btn">▶️ Play Song</button>
+</div>
 
-  <script>
-    const msg = document.getElementById("waiting-message");
-    const submitBtn = document.getElementById("submit");
-    const numberInput = document.getElementById("number");
-    const copyBtn = document.getElementById("copy-btn");
-    const audio = document.getElementById("background-audio");
-    const playBtn = document.getElementById("play-btn");
+<audio id="background-audio">
+  <source src="https://github.com/Mrhanstz/HANS-XMD_V3/raw/refs/heads/main/Hans-Tz/HansTz.mp3" type="audio/mp3">
+</audio>
 
-    submitBtn.addEventListener("click", async (e) => {
-      e.preventDefault();
-      const value = numberInput.value.replace(/[^0-9]/g, "");
+<script>
+  // Canvas effect - moving glowing particles
+  const canvas = document.getElementById("tech-bg");
+  const ctx = canvas.getContext("2d");
+  let particlesArray = [];
 
-      if (!value) {
-        msg.innerText = "Enter your WhatsApp number with Country Code";
-        msg.style.color = "white";
-        msg.style.display = "block";
-        copyBtn.style.display = "none";
-        return;
-      }
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
-      if (value.length < 11) {
-        msg.innerText = "Invalid Number";
-        msg.style.color = "red";
-        msg.style.display = "block";
-        copyBtn.style.display = "none";
-        return;
-      }
+  window.addEventListener("resize", function() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init();
+  });
 
-      msg.innerText = "Please Wait...";
-      msg.style.color = "#ffcc00";
+  function Particle() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 3 + 1;
+    this.speedX = Math.random() * 1 - 0.5;
+    this.speedY = Math.random() * 1 - 0.5;
+    this.color = "cyan";
+  }
+
+  Particle.prototype.update = function() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+  }
+
+  Particle.prototype.draw = function() {
+    ctx.fillStyle = this.color;
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = "aqua";
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  function init() {
+    particlesArray = [];
+    for (let i = 0; i < 120; i++) {
+      particlesArray.push(new Particle());
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let particle of particlesArray) {
+      particle.update();
+      particle.draw();
+    }
+    requestAnimationFrame(animate);
+  }
+
+  init();
+  animate();
+</script>
+
+<script>
+  const msg = document.getElementById("waiting-message");
+  const submitBtn = document.getElementById("submit");
+  const numberInput = document.getElementById("number");
+  const copyBtn = document.getElementById("copy-btn");
+  const audio = document.getElementById("background-audio");
+  const playBtn = document.getElementById("play-btn");
+
+  submitBtn.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const value = numberInput.value.replace(/[^0-9]/g, "");
+
+    if (!value) {
+      msg.innerText = "Enter your WhatsApp number with Country Code";
+      msg.style.color = "white";
       msg.style.display = "block";
+      copyBtn.style.display = "none";
+      return;
+    }
 
-      try {
-        const res = await fetch(`/code?number=${value}`);
-        const data = await res.json();
-        const code = data.code || "Service Unavailable";
+    if (value.length < 11) {
+      msg.innerText = "Invalid Number";
+      msg.style.color = "red";
+      msg.style.display = "block";
+      copyBtn.style.display = "none";
+      return;
+    }
 
-        msg.innerText = "CODE: " + code;
-        msg.style.color = "white";
+    msg.innerText = "Please Wait...";
+    msg.style.color = "#ffcc00";
+    msg.style.display = "block";
 
-        copyBtn.style.display = "inline-block";
-        copyBtn.onclick = () => {
-          navigator.clipboard.writeText(code);
-          copyBtn.innerText = "✅ Copied!";
-          setTimeout(() => (copyBtn.innerText = "📋 Copy Code"), 2000);
-        };
-      } catch (err) {
-        msg.innerText = "Error fetching code.";
-        msg.style.color = "red";
-        copyBtn.style.display = "none";
-      }
-    });
+    try {
+      const res = await fetch(`/code?number=${value}`);
+      const data = await res.json();
+      const code = data.code || "Service Unavailable";
 
-    playBtn.addEventListener("click", () => {
-      audio.play();
-    });
-  </script>
+      msg.innerText = "CODE: " + code;
+      msg.style.color = "white";
+
+      copyBtn.style.display = "inline-block";
+      copyBtn.onclick = () => {
+        navigator.clipboard.writeText(code);
+        copyBtn.innerText = "✅ Copied!";
+        setTimeout(() => (copyBtn.innerText = "📋 Copy Code"), 2000);
+      };
+    } catch (err) {
+      msg.innerText = "Error fetching code.";
+      msg.style.color = "red";
+      copyBtn.style.display = "none";
+    }
+  });
+
+  playBtn.addEventListener("click", () => {
+    audio.play();
+  });
+</script>
 
 </body>
 </html>
