@@ -1,11 +1,10 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>B.M.B-XMD</title>
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
       --text-color: #ffffff;
@@ -15,185 +14,173 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }html, body {
-  height: 100%;
-  font-family: 'Inter', sans-serif;
-}
-
-body {
-  background: #000;
-  color: var(--text-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  padding: 20px;
-}
-
-#matrixCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.container {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 400px;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 16px;
-  padding: 25px;
-  box-shadow: 0 0 25px rgba(0, 247, 255, 0.4);
-  border: 1px solid var(--border-color);
-  backdrop-filter: blur(8px);
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.logo {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 16px;
-  background: url('https://files.catbox.moe/391229.jpg') center/cover no-repeat;
-  border-radius: 50%;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 10px rgba(0, 247, 255, 0.8); }
-  50% { box-shadow: 0 0 25px rgba(0, 247, 255, 1); }
-}
-
-.title {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  background: linear-gradient(270deg, #ffffff, #eeeeee, #ffffff);
-  background-size: 1000% 1000%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientText 5s ease infinite;
-}
-
-@keyframes gradientText {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 25px;
-}
-
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px;
-  font-size: 15px;
-  font-weight: bold;
-  border: 1.5px solid var(--border-color);
-  border-radius: 12px;
-  background: rgba(255,255,255,0.1);
-  text-decoration: none;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-image: linear-gradient(90deg, #ffffff, #dddddd, #ffffff);
-  background-size: 400%;
-  animation: animateText 6s linear infinite;
-}
-
-.button i {
-  color: #00f7ff;
-}
-
-.button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
-}
-
-@keyframes animateText {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.footer {
-  text-align: center;
-  margin-top: 25px;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.5);
-}
-
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #000;
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      padding: 20px;
+    }
+    #matrixCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 400px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 0 25px rgba(0, 247, 255, 0.4);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(8px);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 16px;
+      background: url('https://files.catbox.moe/p0xeh3.jpg') center/cover no-repeat;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 10px rgba(0, 247, 255, 0.8); }
+      50% { box-shadow: 0 0 25px rgba(0, 247, 255, 1); }
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      background: linear-gradient(270deg, #ffffff, #eeeeee, #ffffff);
+      background-size: 1000% 1000%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientText 5s ease infinite;
+    }
+    @keyframes gradientText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 25px;
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: bold;
+      border: 1.5px solid var(--border-color);
+      border-radius: 12px;
+      text-decoration: none;
+      background-image: linear-gradient(90deg, #ffffff, #dddddd, #ffffff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      background-size: 400%;
+      animation: animateText 6s linear infinite;
+    }
+    .button i {
+      color: #00f7ff;
+    }
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+    }
+    @keyframes animateText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
   </style>
 </head>
 <body>
 <canvas id="matrixCanvas"></canvas>
-  <div class="container">
-    <div class="header">
-      <div class="logo"></div>
-      <h1 class="title">B.M.B-XMD SESSION_ID</h1>
-    </div>
-    <div class="button-container">
-      <a href="/qr" class="button" target="_blank">
-        <i class="fas fa-qrcode"></i> QR CODE
-      </a>
-      <a href="/pair" class="button" target="_blank">
-        <i class="fas fa-link"></i> PAIRING CODE
-      </a>
-      <a href="https://github.com/bmbtech11/B.M.B-XMD/fork" class="button" target="_blank">
-        <i class="fas fa-code-branch"></i> FORK BOT
-      </a>
-      <a href="https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z" class="button" target="_blank">
-        <i class="fab fa-whatsapp"></i> WHATSAPP
-      </a>
-      <a href="https://github.com/bmbtech11/B.M.B-XMD" class="button" target="_blank">
-        <i class="fas fa-bug"></i> REPORT ERROR
-      </a>
-    </div>
-    <div class="footer">
-      𝗕.𝗠.𝗕-𝗧𝗘𝗖𝗛 &copy; <span id="currentYear"></span>
-    </div>
+<div class="container">
+  <div class="header">
+    <div class="logo"></div>
+    <h1 class="title">B.M.B-XMD SESSION_ID</h1>
   </div>
-  <script>
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-    const canvas = document.getElementById("matrixCanvas");
-    const ctx = canvas.getContext("2d");
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
-const fontSize = 14;
-const columns = canvas.width / fontSize;
-const drops = Array.from({ length: columns }).fill(1);
+  <div class="button-container">
+    <a href="/qr" class="button" target="_blank">
+      <i class="fas fa-qrcode"></i> QR CODE
+    </a>
+    <a href="/pair" class="button" target="_blank">
+      <i class="fas fa-link"></i> PAIRING CODE
+    </a>
+    <a href="https://github.com/bmbtech11/B.M.B-XMD/fork" class="button" target="_blank">
+      <i class="fas fa-code-branch"></i> FORK BOT
+    </a>
+    <a href="https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z" class="button" target="_blank">
+      <i class="fab fa-whatsapp"></i> WHATSAPP
+    </a>
+    <a href="https://github.com/bmbtech11/B.M.B-XMD" class="button" target="_blank">
+      <i class="fas fa-bug"></i> REPORT ERROR
+    </a>
+  </div>
+  <div class="footer">
+    𝗕.𝗠.𝗕-𝗧𝗘𝗖𝗛 &copy; <span id="currentYear"></span>
+  </div>
+</div>
 
-function drawMatrix() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "#00f7ff";
-  ctx.font = fontSize + "px monospace";
-  for (let i = 0; i < drops.length; i++) {
-    const text = letters.charAt(Math.floor(Math.random() * letters.length));
-    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-      drops[i] = 0;
+<script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+  const canvas = document.getElementById("matrixCanvas");
+  const ctx = canvas.getContext("2d");
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+  const fontSize = 14;
+  const columns = canvas.width / fontSize;
+  const drops = Array.from({ length: columns }).fill(1);
+
+  function drawMatrix() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#00f7ff";
+    ctx.font = fontSize + "px monospace";
+    for (let i = 0; i < drops.length; i++) {
+      const text = letters.charAt(Math.floor(Math.random() * letters.length));
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
     }
-    drops[i]++;
   }
-}
-setInterval(drawMatrix, 33);
-
-  </script>
+  setInterval(drawMatrix, 33);
+</script>
 </body>
-        </html>
+</html>
