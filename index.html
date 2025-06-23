@@ -92,21 +92,10 @@
       margin-top: 10px;
       padding: 8px 12px;
       font-size: 14px;
-      background-color: #222;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    #play-btn {
-      margin-top: 15px;
-      padding: 8px 15px;
-      font-weight: bold;
-      background: #00cc66;
+      background-color: #00cc66; /* Kijani */
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
     }
   </style>
@@ -124,13 +113,8 @@
   </div>
 
   <p id="waiting-message">Please Wait...</p>
-  <button id="copy-btn">©️ Copy</button>
-  <button id="play-btn">🎵 Song</button>
+  <button id="copy-btn">📋 Copy Code</button>
 </div>
-
-<audio id="background-audio">
-  <source src="https://files.catbox.moe/mfuyqk.mp3" type="audio/mp3">
-</audio>
 
 <script>
   // Canvas effect - moving glowing particles
@@ -198,8 +182,6 @@
   const submitBtn = document.getElementById("submit");
   const numberInput = document.getElementById("number");
   const copyBtn = document.getElementById("copy-btn");
-  const audio = document.getElementById("background-audio");
-  const playBtn = document.getElementById("play-btn");
 
   submitBtn.addEventListener("click", async (e) => {
     e.preventDefault();
@@ -244,10 +226,6 @@
       msg.style.color = "red";
       copyBtn.style.display = "none";
     }
-  });
-
-  playBtn.addEventListener("click", () => {
-    audio.play();
   });
 </script>
 
