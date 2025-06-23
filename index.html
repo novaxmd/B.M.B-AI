@@ -3,134 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: black;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
-      margin: 0;
+      background: #111;
+      font-family: 'Roboto', sans-serif;
       color: white;
-    }
-
-    {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "url": "https://railway.app",
-            "logo": "https://files.catbox.moe/8spkl4.jpeg"
-    }
-
-    .button-container {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    h3 {
-      margin-top: -40px;
-      opacity: 0;
-      animation: fadeIn 3s forwards;
-    }
-
-    .button {
-      width: 140px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 0px 15px;
-      background-color: red;
-      border-radius: 10px;
-      border: none;
-      color: white;
+      overflow: hidden;
       position: relative;
-      cursor: pointer;
-      font-weight: 900;
-      transition-duration: .2s;
-      background: linear-gradient(0deg, #000, #272727);
-      text-decoration: none;
     }
 
-  
-    footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #222; /* Darker gray footer background */
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 14px;
-    
-  }
-    .button:before, .button:after {
-      content: '';
+    /* Background Particles */
+    #particles-js {
       position: absolute;
-      left: -2px;
-      top: -2px;
-      border-radius: 10px;
-      background: linear-gradient(45deg, #48ff00, #15ff00, #000000,#000000, #ff0000);
-      background-size: 400%;
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       z-index: -1;
-      animation: steam 10s linear infinite;
     }
 
-    @keyframes steam {
-      0% {
-        background-position: 0 0;
-      }
-
-      50% {
-        background-position: 400% 0;
-      }
-
-      100% {
-        background-position: 0 0;
-      }
+    /* Frame */
+    .frame {
+      width: 90%;
+      max-width: 400px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      backdrop-filter: blur(8px);
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      position: relative;
     }
 
-    .button:after {
-      filter: blur(50px);
+    /* Typing effect with smooth right to left at 64fps */
+    .typing-effect {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      animation: typing 10s steps(50) infinite, randomColor 10s linear infinite;
     }
 
-    .button span {
-      z-index: 1;
+    /* Smooth typing animation */
+    @keyframes typing {
+      0% { width: 0%; }
+      100% { width: 100%; }
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+    /* Random color effect */
+    @keyframes randomColor {
+      0% { color: #FF4500; }
+      25% { color: #4caf50; }
+      50% { color: #1e90ff; }
+      75% { color: #ff9800; }
+      100% { color: #9c27b0; }
     }
+
+    /* 3D Button Styles */
+    .btn {
+      padding: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      background-color: #4caf50;
+      transition: background-color 3.6s ease, box-shadow 0.6s ease, transform 0.6s ease;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transform: perspective(500px) rotateX(0deg) rotateY(0deg);
+    }
+
+    /* Hover effect to make buttons look 3D */
+    .btn:hover {
+      transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Button grid */
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    /* 3D Button random color change */
+    @keyframes buttonColorChange {
+      0% { background-color: #FF4500; }
+      25% { background-color: #4caf50; }
+      50% { background-color: #1e90ff; }
+      75% { background-color: #ff9800; }
+      100% { background-color: #9c27b0; }
+    }
+
   </style>
 </head>
 <body>
-  <div class="button-container">
-    <h3>GOODCHILD-XMD SESSION SECTION</h3>
-    <div></div>
-    <a href="/qr" class="button" target="_blank"> <span>QR-CODE</span> </a> <br>
-    <a href="/pair" class="button" target="_blank"> <span>PAIRING-CODE</span> </a> <br>
-    <a href="https://github.com/Goodchildwilliamz/GOODCHILD-XMD/fork" class="button" target="_blank"> <span>REPO</span> </a> <br> </a>
-    <a href="https://whatsapp.com/channel/0029Vb4vbKF6xCSMEFopxc10" class="button" target="_blank"> <span>WhatsApp</span> </a> <br>
-    <a href="https://www.facebook.com/share/goodchildwilliamz/" class="button" target="_blank"> <span>FACEBOOK</span> </a> <br>
-    <a href="https://youtube.com/@abdallahsalim-f5u?si=PPyQy2qogiXA-PCG" class="button" target="_blank"> <span>YOUTUBE</span> </a> <br>
-    <a href="https://www.instagram.com/Goodchildwilliamz" class="button" target="_blank"> <span>INSTAGRAM</span> </a> <br>
-    <a href="https://www.tiktok.com/Goodchildwilliamz" class="button" target="_blank"> <span>TIKTOK</span> </a> <br>
 
-    <p>OWNER</p>
+  <div id="particles-js"></div>
 
-    <a href="https://wa.me/255763755563" class="button" target="_blank"> <span>GOODCHILD•••²⁴⁰²</span> </a> <br>
+  <div class="frame">
+    <div class="typing-effect">
+      <span>WELCOME TO THE HANS_TECH</span>
+    </div>
 
-    <footer>
-     GOODCHILD•••²⁴⁰² &copy; <span id="currentYear"></span>
-    </footer>
+    <div class="button-container">
+      <button onclick="window.open(`/pair`)" class="btn">Pair Code</button>
+      <button onclick="window.open(`https://github.com/Mrhanstz/HANS-XMD_V2`)" class="btn">HANS-XMD_V3</button>
+      <button onclick="window.open(`https://github.com/Mrhanstz/VORTEX-XMD`)" class="btn">VORTEX-XMD-BOT</button>
+      <button onclick="window.open(`https://www.youtube.com/@HANSTZ-TECH`)" class="btn">YOUTUBE</button>
+      <button onclick="window.open(`https://wa.me/+255756530143`)" class="btn">CONTACT</button>
+      <button onclick="window.open(`https://whatsapp.com/channel/0029VasiOoR3bbUw5aV4qB31`)" class="btn">Channel-2</button>
+    </div>
+
   
+  <script>
+    // Initialize ParticlesJS
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 120, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#FF4500" },
+        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000" } },
+        "opacity": { "value": 0.4, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 } },
+        "size": { "value": 5, "random": true, "anim": { "enable": true, "speed": 10, "size_min": 0.1 } },
+        "line_linked": { "enable": true, "distance": 120, "color": "#FF4500", "opacity": 0.3, "width": 1 },
+        "move": { "enable": true, "speed": 5, "random": true }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } }
+      },
+      "retina_detect": true
+    });
+
+    // Function to change button colors smoothly with mix of last color
+    function getRandomColor() {
+      const colors = ["#FF4500", "#4caf50", "#1e90ff", "#ff9800", "#9c27b0", "#f44336", "#00bcd4", "#ffeb3b"];
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    // Function to apply unique colors to each button
+    function changeButtonColors() {
+      const buttons = document.querySelectorAll('.btn');
+      buttons.forEach(button => {
+        const newColor = getRandomColor();
+        button.style.transition = "background-color 3.6s ease";
+        button.style.backgroundColor = newColor;
+      });
+    }
+
+    // Change button colors every 3.6 seconds with different colors for each button
+    setInterval(changeButtonColors, 3600);
+
+    // Background music logic
+    const audio = document.getElementById('background-audio');
+
+    // Play audio automatically when the page loads
+    window.addEventListener("load", () => {
+      audio.play().catch(error => {
+        console.log("Autoplay blocked: User interaction needed");
+        // Try again after a short delay if autoplay is blocked
+        setTimeout(() => audio.play(), 1000);
+      });
+    });
+
+    // Allow user interaction to trigger audio if autoplay is blocked
+    document.addEventListener("click", () => {
+      audio.play().catch(error => console.log("Autoplay still blocked, waiting for user interaction"));
+    });
+
+  </script>
+
 </body>
-                                                      </html>
-                                                      
+</html>
