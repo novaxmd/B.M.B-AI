@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KHAN MD</title>
+  <title>B.M.B-XMD</title>
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -10,13 +10,12 @@
     :root {
       --text-color: #ffffff;
       --border-color: rgba(0, 247, 255, 0.2);
-    }* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }html, body {
   height: 100%;
   font-family: 'Inter', sans-serif;
 }
@@ -63,13 +62,8 @@ body {
   width: 80px;
   height: 80px;
   margin: 0 auto 16px;
-  background: #00f7ff;
+  background: url('https://files.catbox.moe/p0xeh3.jpg') center/cover no-repeat;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  color: #000;
   animation: pulse 2s infinite;
 }
 
@@ -82,7 +76,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 8px;
-  background: linear-gradient(270deg, #ff00c8, #00fff7, #00ff2a, #faff00, #ff00c8);
+  background: linear-gradient(270deg, #ffffff, #eeeeee, #ffffff);
   background-size: 1000% 1000%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -117,7 +111,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(90deg, #ff00c8, #00fff7, #00ff2a, #faff00, #ff00c8);
+  background-image: linear-gradient(90deg, #ffffff, #dddddd, #ffffff);
   background-size: 400%;
   animation: animateText 6s linear infinite;
 }
@@ -150,8 +144,8 @@ body {
 <canvas id="matrixCanvas"></canvas>
   <div class="container">
     <div class="header">
-      <div class="logo"><i class="fas fa-robot"></i></div>
-      <h1 class="title">MAFIA MD SESSION SELECTION</h1>
+      <div class="logo"></div>
+      <h1 class="title">B.M.B-XMD SESSION_ID</h1>
     </div>
     <div class="button-container">
       <a href="/qr" class="button" target="_blank">
@@ -160,27 +154,26 @@ body {
       <a href="/pair" class="button" target="_blank">
         <i class="fas fa-link"></i> PAIRING CODE
       </a>
-      <a href="https://github.com/MAFIAADEEL/MAFIA-MD/fork" class="button" target="_blank">
+      <a href="https://github.com/bmbtech11/B.M.B-XMD/fork" class="button" target="_blank">
         <i class="fas fa-code-branch"></i> FORK BOT
       </a>
-      <a href="https://whatsapp.com/channel/0029VavP4nX0G0XggHzhVg0R" class="button" target="_blank">
+      <a href="https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z" class="button" target="_blank">
         <i class="fab fa-whatsapp"></i> WHATSAPP
       </a>
-      <a href="https://github.com/MAFIAADEEL" class="button" target="_blank">
+      <a href="https://github.com/bmbtech11/B.M.B-XMD" class="button" target="_blank">
         <i class="fas fa-bug"></i> REPORT ERROR
       </a>
     </div>
     <div class="footer">
-      MAFIA-MD &copy; <span id="currentYear"></span>
+      𝗕.𝗠.𝗕-𝗧𝗘𝗖𝗛 &copy; <span id="currentYear"></span>
     </div>
   </div>
   <script>
-    document.getElementById("currentYear").textContent = new Date().getFullYear();const canvas = document.getElementById("matrixCanvas");
-const ctx = canvas.getContext("2d");
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
-
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    const canvas = document.getElementById("matrixCanvas");
+    const ctx = canvas.getContext("2d");
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
 const fontSize = 14;
 const columns = canvas.width / fontSize;
 const drops = Array.from({ length: columns }).fill(1);
@@ -203,4 +196,4 @@ setInterval(drawMatrix, 33);
 
   </script>
 </body>
-  </html>
+        </html>
