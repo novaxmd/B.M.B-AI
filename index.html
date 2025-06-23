@@ -1,93 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>𝐀𝐋𝐎𝐍𝐄 𝐌𝐃 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐒𝐂𝐀𝐍𝐍𝐄𝐑 </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KHAN MD</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    :root {
+      --primary-color: #00f7ff; /* Neon Cyan */
+      --secondary-color: #000000;
+      --accent-color: #1a1a1a;
+      --text-color: #ffffff;
+      --background-color: #0a0a0a;
+      --hover-color: #222222;
+      --border-color: rgba(0, 247, 255, 0.2);
+      --neon-glow: 0 0 10px rgba(0, 247, 255, 0.8),
+                   0 0 20px rgba(0, 247, 255, 0.6),
+                   0 0 30px rgba(0, 247, 255, 0.4);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      display: flex; 
-      flex-direction: column;
+      font-family: 'Inter', sans-serif;
+      background: var(--background-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      background: var(--accent-color);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: var(--neon-glow);
+      border: 1px solid var(--border-color);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 16px;
+      background: var(--primary-color);
+      border-radius: 50%;
+      display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background-image:  url("https://files.catbox.moe/kxfnln.mp4"); /* set the background image */
+      font-size: 32px;
+      color: var(--secondary-color);
+      box-shadow: var(--neon-glow);
+      animation: pulse 2s infinite;
     }
 
-    .btn {
-      --color: #e5f5f1;
-      --color2: rgb(0, 0, 0);
-      width: 200px;
-      padding: 0.8em 1.75em;
-      background-color: Green;
-      border-radius: 6px;
-      border: .3px solid var(--color);
-      transition: .5s;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      z-index: 1;
-      font-weight: 300;
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 10px rgba(0, 247, 255, 0.8); }
+      50% { box-shadow: 0 0 25px rgba(0, 247, 255, 1); }
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--primary-color);
+      text-shadow: 0 0 5px rgba(0, 247, 255, 0.7);
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: bold;
+      color: var(--text-color);
+      border: 1.5px solid var(--border-color);
+      border-radius: 12px;
+      background: var(--hover-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: rgba(0, 247, 255, 0.1);
+      border-color: var(--primary-color);
+      box-shadow: 0 0 15px rgba(0, 247, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .button i {
       font-size: 17px;
-      font-family: 'Roboto', 'Segoe UI', sans-serif;
-      text-transform: uppercase;
-      color: var(--color);
-      margin-bottom: 24px;
+      color: var(--primary-color);
     }
 
-    .btn::after, .btn::before {
-      content: '';
-      display: block;
-      height: 100%;
-      width: 100%;
-      transform: skew(90deg) translate(-50%, -50%);
-      position: absolute;
-      inset: 50%;
-      left: 25%;
-      z-index: -1;
-      transition: .5s ease-out;
-      background-color: var(--color);
-    }
-
-    .btn::before {
-      top: -50%;
-      left: -25%;
-      transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
-    }
-
-    .btn:hover::before {
-      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
-    }
-
-    .btn:hover::after {
-      transform: skew(45deg) translate(-50%, -50%);
-    }
-
-    .btn:hover {
-      color: var(--color2);
-    }
-
-    .btn:active {
-      filter: brightness(.7);
-      transform: scale(.98);
+    .footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="header">
+      <div class="logo"><i class="fas fa-robot"></i></div>
+      <h1 class="title">MAFIA MD SESSION SELECTION</h1>
+    </div>
+    <div class="button-container">
+      <a href="/qr" class="button" target="_blank">
+        <i class="fas fa-qrcode"></i> QR CODE
+      </a>
+      <a href="/pair" class="button" target="_blank">
+        <i class="fas fa-link"></i> PAIRING CODE
+      </a>
+      <a href="https://github.com/MAFIAADEEL/MAFIA-MD/fork" class="button" target="_blank">
+        <i class="fas fa-code-branch"></i> FORK BOT
+      </a>
+      <a href="https://whatsapp.com/channel/0029VavP4nX0G0XggHzhVg0R" class="button" target="_blank">
+        <i class="fab fa-whatsapp"></i> WHATSAPP
+      </a>
+      <a href="https://github.com/MAFIAADEEL" class="button" target="_blank">
+        <i class="fas fa-bug"></i> REPORT ERROR
+      </a>
+    </div>
+    <div class="footer">
+      MAFIA-MD &copy; <span id="currentYear"></span>
+    </div>
+  </div>
 
-  <button onclick="window.open(`https://topu-scanner.onrender.com/qr`)" class="btn">qr code</button>
-  <button onclick="window.open(`/pair`)" class="btn">pair code</button>
-  <button onclick="window.open(`https://github.com/Toputech/ALONE-MD-V1`)" class="btn">github</button>
-  <button onclick="window.open(`https://wa.me/message/6ST5TFZLH6BGF1`)" class="btn">Contact Me</button>
-  <button onclick="window.open(`https://dashboard.heroku.com/new?template=https://github.com/Toputech/Alone`)" class="btn">Deploy TOPU MD</button>
-  <button onclick="window.open(`https://chat.whatsapp.com/BxelCdrHnDYBNfMy2jafgI`)" class="btn">Wa Group</button>
-  <button onclick="window.open(`https://whatsapp.com/channel/0029VaeRrcnADTOKzivM0S1r`)" class="btn">Wa Channel</button>
-
-
-  
-  
-  
-
+  <script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
 </body>
-</html>
+  </html>
