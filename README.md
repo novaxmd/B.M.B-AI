@@ -20,10 +20,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/bmb200?tab=followers">
+  <a href="https://github.com/novaxmd?tab=followers">
     <img src="https://img.shields.io/github/followers/bmb200?label=FOLLOWERS&style=for-the-badge&logo=github&color=blueviolet"/>
   </a>
-  <a href="https://github.com/bmb200/B.M.B-XMD-V2/stargazers">
+  <a href="https://github.com/novaxmd/NOVA-XMD/stargazers">
     <img src="https://img.shields.io/github/stars/bmb200/B.M.B-XMD-V2?style=for-the-badge&color=yellow&logo=github"/>
   </a>
   <a href="https://github.com/bmb200/B.M.B-XMD-V2/fork">
