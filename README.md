@@ -1,32 +1,3 @@
-https://readme-typing-svg.demolab.com?font=Rockstar-ExtraBold&size=40&pause=1000&color=00BFFF&center=true&vCenter=true&width=1000&lines=🔥+WELCOME+TO+B.M.B-XMD+DEPLOY+SYSTEM+🔥
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Rockstar-ExtraBold&size=40&pause=1000&color=00BFFF&center=true&vCenter=true&width=1000&lines=🔥+WELCOME+TO+B.M.B-XMD+DEPLOY+SYSTEM+🔥" alt="Typing SVG" />
-</p>
-
----
-
-### 🔐 ➌ PAIR SESSION CODE
-
-[![](https://img.shields.io/badge/🔐_PAIR_CODE_SESSION-1E90FF?style=for-the-badge&logo=codepen&color=blue)](https://session-bmb-code.onrender.com/)
-
----
-
-### 📸 ➍ QR SESSION ID
-
-[![](https://img.shields.io/badge/📷_SCAN_QR_SESSION-1E90FF?style=for-the-badge&logo=codepen&color=blue)](https://session-bmb-code.onrender.com/pair)
-
----
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Rockstar-ExtraBold&size=40&pause=1200&color=00BFFF&center=true&vCenter=true&width=1000&lines=🔥+THE+DEPLOYMENT+SITE+IS+NOW+DEPLOYED+🔥" alt="Typing SVG" />
-</p>
-
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=45&pause=1000&color=FF0000&center=true&vCenter=true&width=1000&lines=🔥+WELCOME+TO+B.M.B-XMD+DEPLOY+SYSTEM+🔥" alt="Typing SVG" />
-</p>
-
 <p align="center">
   <img src="https://files.catbox.moe/ik2vqs.jpg" width="270" style="border-radius: 20px;" />
 </p>
