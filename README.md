@@ -27,35 +27,51 @@
 
 ## 🚀 Deployment Steps
 
-<div align="center" style="display: flex; flex-direction: column; gap: 10px;">
+<div align="center">
+
+  <br/>
 
   <a href="https://github.com/bmb200/B.M.B-XMD-V2/fork">
     <img title="FORK REPO" src="https://img.shields.io/badge/🔁_FORK_REPO-000000?style=flat&logo=github&logoColor=white&color=orange" />
   </a>
 
+  <br/>
+
   <a href="https://session-bmb-code.onrender.com/">
     <img title="PAIR CODE SESSION" src="https://img.shields.io/badge/🔐_PAIR_CODE_SESSION-000000?style=flat&logo=codepen&logoColor=white&color=purple" />
   </a>
+
+  <br/>
 
   <a href="https://session-bmb-code.onrender.com/pair">
     <img title="QR SESSION" src="https://img.shields.io/badge/📷_SCAN_QR_SESSION-000000?style=flat&logo=codepen&logoColor=white&color=blue" />
   </a>
 
+  <br/>
+
   <a href="https://dashboard.heroku.com/new?template=https://github.com/novaxmd/NOVA-XMD/tree/main">
     <img title="DEPLOY ON HEROKU" src="https://img.shields.io/badge/🚀_HEROKU_DEPLOY-000000?style=flat&logo=heroku&logoColor=white&color=6971FF" />
   </a>
+
+  <br/>
 
   <a href="https://railway.app/new">
     <img title="DEPLOY ON RAILWAY" src="https://img.shields.io/badge/🚄_RAILWAY_DEPLOY-000000?style=flat&logo=railway&logoColor=white&color=orange" />
   </a>
 
+  <br/>
+
   <a href="https://dashboard.render.com/web/new">
     <img title="DEPLOY ON RENDER" src="https://img.shields.io/badge/🚀_RENDER_DEPLOY-000000?style=flat&logo=render&logoColor=white&color=61DAFB" />
   </a>
 
+  <br/>
+
   <a href="https://talkdrove.com/share-bot/11">
     <img title="DEPLOY ON TALKDROVE" src="https://img.shields.io/badge/📤_TALKDROVE_DEPLOY-000000?style=flat&logo=telegram&logoColor=white&color=FF004D" />
   </a>
+
+  <br/>
 
   <a href="https://app.koyeb.com">
     <img title="DEPLOY ON KOYEB" src="https://img.shields.io/badge/⚙️_KOYEB_DEPLOY-000000?style=flat&logo=koyeb&logoColor=white&color=FF009D" />
