@@ -36,11 +36,7 @@
 
 ---
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Rajdhani&size=35&pause=1000&color=F700FF&center=true&vCenter=true&width=1000&lines=✨+EASY+DEPLOYMENT+STEPS+✨" alt="Typing SVG" />
-</p>
-
----
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=50&pause=4800color=RRGGBB&lines=true&vCenter=true&width=815&height=100&lines=NOVA-XMD+DEPLOY+NOW+ENJOY+BOT)](https://git.io/typing-svg) 
 
 ### 🔰 ➊ FOLLOW GITHUB
 
