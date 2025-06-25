@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Rockstar-ExtraBold&size=45&pause=1000&color=00BFFF&center=true&vCenter=true&width=1000&lines=🚀+B.M.B-XMD+🚀" alt="Typing SVG" />
-</p>
+https://readme-typing-svg.demolab.com?font=Rockstar-ExtraBold&size=40&pause=1000&color=00BFFF&center=true&vCenter=true&width=1000&lines=🔥+WELCOME+TO+B.M.B-XMD+DEPLOY+SYSTEM+🔥
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Rockstar-ExtraBold&size=40&pause=1000&color=00BFFF&center=true&vCenter=true&width=1000&lines=🔥+WELCOME+TO+B.M.B-XMD+DEPLOY+SYSTEM+🔥" alt="Typing SVG" />
