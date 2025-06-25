@@ -16,7 +16,7 @@
 
 
 <p align="center">
-  <img src="https://files.catbox.moe/cq75u2.jpg" width="270" style="border-radius: 20px;" />
+  <img src="https://files.catbox.moe/f5q902.jpg" width="270" style="border-radius: 20px;" />
 </p>
 
 <p align="center">
@@ -26,11 +26,11 @@
   <a href="https://github.com/novaxmd/NOVA-XMD/stargazers">
     <img src="https://img.shields.io/github/stars/bmb200/NOVA-XMD?style=for-the-badge&color=yellow&logo=github"/>
   </a>
-  <a href="https://github.com/bmb200/B.M.B-XMD-V2/fork">
-    <img src="https://img.shields.io/github/forks/bmb200/B.M.B-XMD-V2?style=for-the-badge&color=orange&logo=github"/>
+  <a href="https://github.com/novaxmd/NOVA-XMD/fork">
+    <img src="https://img.shields.io/github/forks/novaxmd/NOVA-XMD?style=for-the-badge&color=orange&logo=github"/>
   </a>
-  <a href="https://github.com/bmb200/B.M.B-XMD-V2/watchers">
-    <img src="https://img.shields.io/github/watchers/bmb200/B.M.B-XMD-V2?label=WATCHING&style=for-the-badge&color=ff69b4&logo=github"/>
+  <a href="https://github.com/novaxmd/NOVA-XMD/watchers">
+    <img src="https://img.shields.io/github/watchers/novaxmd/NOVA-XMD?label=WATCHING&style=for-the-badge&color=ff69b4&logo=github"/>
   </a>
 </p>
 
@@ -46,7 +46,7 @@
 
 ### 🔃 ➋ FORK REPOSITORY
 
-[![](https://img.shields.io/badge/🔁_FORK_THIS_REPO-FF4500?style=for-the-badge&logo=github)](https://github.com/bmb200/B.M.B-XMD-V2/fork)
+[![](https://img.shields.io/badge/🔁_FORK_THIS_REPO-FF4500?style=for-the-badge&logo=github)](https://github.com/novaxmd/NOVA-XMD/fork)
 
 ---
 
@@ -85,6 +85,3 @@
 
 ---
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Rubik+Glitch&size=40&pause=1200&color=F700FF&center=true&vCenter=true&width=1000&lines=🌟+THANKS+FOR+USING+B.M.B-XMD+🌟" alt="Typing SVG" />
-</p>
