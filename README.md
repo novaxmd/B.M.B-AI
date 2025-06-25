@@ -1,4 +1,6 @@
-<h1 align="center">🚀 𝐁.𝐌.𝐁 - 𝐗𝐌𝐃 🚀</h1>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=45&pause=1000&color=00BFFF&center=true&vCenter=true&width=1000&lines=🚀+B.M.B-XMD+🚀" alt="Typing SVG" />
+</p>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=45&pause=1000&color=FF0000&center=true&vCenter=true&width=1000&lines=🔥+WELCOME+TO+B.M.B-XMD+DEPLOY+SYSTEM+🔥" alt="Typing SVG" />
@@ -43,20 +45,20 @@
 
 ---
 
-### 📸 ➌ QR SESSION ID
-
-[![](https://img.shields.io/badge/📷_SCAN_QR_SESSION-FF00FF?style=for-the-badge&logo=codepen)](https://session-bmb-code.onrender.com/pair)
-
----
-
-### 🔐 ➍ PAIR SESSION CODE
+### 🔐 ➌ PAIR SESSION CODE
 
 [![](https://img.shields.io/badge/🔐_PAIR_CODE_SESSION-8A2BE2?style=for-the-badge&logo=codepen)](https://session-bmb-code.onrender.com/)
 
 ---
 
+### 📸 ➍ QR SESSION ID
+
+[![](https://img.shields.io/badge/📷_SCAN_QR_SESSION-FF00FF?style=for-the-badge&logo=codepen)](https://session-bmb-code.onrender.com/pair)
+
+---
+
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=40&pause=1000&color=00FFD1&center=true&vCenter=true&width=1000&lines=⚡+DEPLOY+OPTIONS+AVAILABLE+NOW!+⚡" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=40&pause=1200&color=FF0000&center=true&vCenter=true&width=1000&lines=🔥+THE+DEPLOYMENT+SITE+IS+NOW+DEPLOYED+🔥" alt="Typing SVG" />
 </p>
 
 ---
