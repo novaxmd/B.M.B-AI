@@ -19,21 +19,6 @@
   <img src="https://files.catbox.moe/f5q902.jpg" width="270" style="border-radius: 20px;" />
 </p>
 
-<p align="center">
-  <a href="https://github.com/novaxmd?tab=followers">
-    <img src="https://img.shields.io/github/followers/bmb200?label=FOLLOWERS&style=for-the-badge&logo=github&color=blueviolet"/>
-  </a>
-  <a href="https://github.com/novaxmd/NOVA-XMD/stargazers">
-    <img src="https://img.shields.io/github/stars/bmb200/NOVA-XMD?style=for-the-badge&color=yellow&logo=github"/>
-  </a>
-  <a href="https://github.com/novaxmd/NOVA-XMD/fork">
-    <img src="https://img.shields.io/github/forks/novaxmd/NOVA-XMD?style=for-the-badge&color=orange&logo=github"/>
-  </a>
-  <a href="https://github.com/novaxmd/NOVA-XMD/watchers">
-    <img src="https://img.shields.io/github/watchers/novaxmd/NOVA-XMD?label=WATCHING&style=for-the-badge&color=ff69b4&logo=github"/>
-  </a>
-</p>
-
 ---
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=50&pause=4800color=RRGGBB&lines=true&vCenter=true&width=815&height=100&lines=NOVA-XMD+DEPLOY+NOW+ENJOY+BOT)](https://git.io/typing-svg) 
