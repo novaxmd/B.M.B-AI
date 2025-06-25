@@ -10,54 +10,44 @@
 
 ---
 
-## 🚀 Deployment Steps
+## 🚀 DEPLOYMENT STEPS
 
-<!-- ACTION BUTTONS -->
+### ➊ Fork This Repo  
+[![](https://img.shields.io/badge/🔁_FORK_REPO-orange?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bmb200/B.M.B-XMD-V2/fork)
 
-<p align="center">
-  <a href="https://github.com/bmb200/B.M.B-XMD-V2/fork">
-    <img title="FORK REPO" src="https://img.shields.io/badge/🔁_FORK_REPO-000000?style=for-the-badge&logo=github&logoColor=white&color=orange" width="260" height="50"/>
-  </a>
-</p>
+---
 
-<p align="center">
-  <a href="https://session-bmb-code.onrender.com/pair">
-    <img title="SCAN QR SESSION" src="https://img.shields.io/badge/📷_SCAN_QR_SESSION-000000?style=for-the-badge&logo=codepen&logoColor=white&color=FF00FF" width="260" height="50"/>
-  </a>
-</p>
+### ➋ Generate QR Session  
+[![](https://img.shields.io/badge/📷_SCAN_QR_SESSION-FF00FF?style=for-the-badge&logo=codepen&logoColor=white)](https://session-bmb-code.onrender.com/pair)
 
-<p align="center">
-  <a href="https://session-bmb-code.onrender.com/">
-    <img title="PAIR CODE SESSION" src="https://img.shields.io/badge/🔐_PAIR_CODE_SESSION-000000?style=for-the-badge&logo=codepen&logoColor=white&color=purple" width="260" height="50"/>
-  </a>
-</p>
+---
+
+### ➌ Pair Code Session  
+[![](https://img.shields.io/badge/🔐_PAIR_CODE_SESSION-purple?style=for-the-badge&logo=codepen&logoColor=white)](https://session-bmb-code.onrender.com/)
+
+---
 
 <p align="center">
-  <a href="https://dashboard.heroku.com/new?template=https://github.com/novaxmd/NOVA-XMD/tree/main">
-    <img title="DEPLOY ON HEROKU" src="https://img.shields.io/badge/🚀_DEPLOY_ON_HEROKU-000000?style=for-the-badge&logo=heroku&logoColor=white&color=6971FF" width="260" height="50"/>
-  </a>
+  <img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=35&pause=1000&color=FF0000&center=true&vCenter=true&width=1000&lines=CHOOSE+A+DEPLOY+OPTION" alt="Typing SVG" />
 </p>
 
-<p align="center">
-  <a href="https://dashboard.render.com/web/new">
-    <img title="DEPLOY ON RENDER" src="https://img.shields.io/badge/🚀_DEPLOY_ON_RENDER-000000?style=for-the-badge&logo=render&logoColor=white&color=61DAFB" width="260" height="50"/>
-  </a>
-</p>
+---
 
-<p align="center">
-  <a href="https://talkdrove.com/share-bot/11">
-    <img title="DEPLOY ON TALKDROVE" src="https://img.shields.io/badge/📤_TALKDROVE_DEPLOY-000000?style=for-the-badge&logo=telegram&logoColor=white&color=FF004D" width="260" height="50"/>
-  </a>
-</p>
+### ➍ Deploy Platforms
 
-<p align="center">
-  <a href="https://app.koyeb.com">
-    <img title="DEPLOY ON KOYEB" src="https://img.shields.io/badge/⚙️_DEPLOY_ON_KOYEB-000000?style=for-the-badge&logo=koyeb&logoColor=white&color=FF009D" width="260" height="50"/>
-  </a>
-</p>
+**Heroku**  
+[![](https://img.shields.io/badge/🚀_DEPLOY_ON_HEROKU-6971FF?style=for-the-badge&logo=heroku&logoColor=white)](https://dashboard.heroku.com/new?template=https://github.com/novaxmd/NOVA-XMD/tree/main)
 
-<p align="center">
-  <a href="https://railway.app/new">
-    <img title="DEPLOY ON RAILWAY" src="https://img.shields.io/badge/🚄_DEPLOY_ON_RAILWAY-000000?style=for-the-badge&logo=railway&logoColor=white&color=orange" width="260" height="50"/>
-  </a>
-</p>
+**Render**  
+[![](https://img.shields.io/badge/🚀_DEPLOY_ON_RENDER-61DAFB?style=for-the-badge&logo=render&logoColor=white)](https://dashboard.render.com/web/new)
+
+**TalkDrove**  
+[![](https://img.shields.io/badge/📤_TALKDROVE_DEPLOY-FF004D?style=for-the-badge&logo=telegram&logoColor=white)](https://talkdrove.com/share-bot/11)
+
+**Koyeb**  
+[![](https://img.shields.io/badge/⚙️_DEPLOY_ON_KOYEB-FF009D?style=for-the-badge&logo=koyeb&logoColor=white)](https://app.koyeb.com)
+
+**Railway**  
+[![](https://img.shields.io/badge/🚄_DEPLOY_ON_RAILWAY-orange?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/new)
+
+---
