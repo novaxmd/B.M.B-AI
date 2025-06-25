@@ -24,7 +24,7 @@
     <img src="https://img.shields.io/github/followers/bmb200?label=FOLLOWERS&style=for-the-badge&logo=github&color=blueviolet"/>
   </a>
   <a href="https://github.com/novaxmd/NOVA-XMD/stargazers">
-    <img src="https://img.shields.io/github/stars/bmb200/B.M.B-XMD-V2?style=for-the-badge&color=yellow&logo=github"/>
+    <img src="https://img.shields.io/github/stars/bmb200/NOVA-XMD?style=for-the-badge&color=yellow&logo=github"/>
   </a>
   <a href="https://github.com/bmb200/B.M.B-XMD-V2/fork">
     <img src="https://img.shields.io/github/forks/bmb200/B.M.B-XMD-V2?style=for-the-badge&color=orange&logo=github"/>
@@ -62,9 +62,7 @@
 
 ---
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=40&pause=1200&color=FF0000&center=true&vCenter=true&width=1000&lines=🔥+THE+DEPLOYMENT+SITE+IS+NOW+DEPLOYED+🔥" alt="Typing SVG" />
-</p>
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=85&pause=100000000&color=FFFF00&lines=true&vCenter=true&width=815&height=100&lines=NOVA-XMD)](https://git.io/typing-svg) 
 
 ---
 
