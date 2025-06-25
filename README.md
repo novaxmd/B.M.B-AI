@@ -27,7 +27,8 @@
 
 ## 🚀 Deployment Steps
 
-<p align="center">
+<div align="center" style="display: flex; flex-direction: column; gap: 10px;">
+
   <a href="https://github.com/bmb200/B.M.B-XMD-V2/fork">
     <img title="FORK REPO" src="https://img.shields.io/badge/🔁_FORK_REPO-000000?style=flat&logo=github&logoColor=white&color=orange" />
   </a>
@@ -59,4 +60,5 @@
   <a href="https://app.koyeb.com">
     <img title="DEPLOY ON KOYEB" src="https://img.shields.io/badge/⚙️_KOYEB_DEPLOY-000000?style=flat&logo=koyeb&logoColor=white&color=FF009D" />
   </a>
-</p>
+
+</div>
