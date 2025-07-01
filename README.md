@@ -23,50 +23,15 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=50&pause=4800color=RRGGBB&lines=true&vCenter=true&width=815&height=100&lines=NOVA-XMD+DEPLOY+NOW+ENJOY+BOT)](https://git.io/typing-svg) 
 
-### 🔰 ➊ FOLLOW GITHUB
+### 🔰 ➊ FOLLOW GITHUB ACCOUNT 
 
 [![](https://img.shields.io/badge/➕_FOLLOW_NOVA-XMD-orange?style=for-the-badge&logo=github)](https://github.com/novaxmd)
 
 ---
 
-### 🔃 ➋ FORK REPOSITORY
+### 🔃 ➋ WHATSAPP CHANNEL
 
-[![](https://img.shields.io/badge/🔁_FORK_THIS_REPO-FF4500?style=for-the-badge&logo=github)](https://github.com/novaxmd/NOVA-XMD/fork)
-
----
-
-### 🔐 ➌ PAIR SESSION CODE
-
-[![](https://img.shields.io/badge/🔐_PAIR_CODE_SESSION-8A2BE2?style=for-the-badge&logo=codepen)](https://session-bmb-code.onrender.com/)
-
----
-
-### 📸 ➍ QR SESSION ID
-
-[![](https://img.shields.io/badge/📷_SCAN_QR_SESSION-FF00FF?style=for-the-badge&logo=codepen)](https://session-bmb-code.onrender.com/pair)
-
----
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=85&pause=100000000&color=FFFF00&lines=true&vCenter=true&width=815&height=100&lines=NOVA-XMD)](https://git.io/typing-svg) 
-
----
-
-### 🚀 DEPLOY TO PLATFORM
-
-**Heroku**  
-[![](https://img.shields.io/badge/🚀_DEPLOY_ON_HEROKU-6971FF?style=for-the-badge&logo=heroku&logoColor=white)](https://dashboard.heroku.com/new?template=https://github.com/novaxmd/NOVA-XMD/tree/main)
-
-**Render**  
-[![](https://img.shields.io/badge/🚀_DEPLOY_ON_RENDER-black?style=for-the-badge&logo=render)](https://dashboard.render.com/web/new)
-
-**TalkDrove**  
-[![](https://img.shields.io/badge/📤_TALKDROVE_DEPLOY-FF004D?style=for-the-badge&logo=telegram)](https://talkdrove.com/share-bot/11)
-
-**Koyeb**  
-[![](https://img.shields.io/badge/⚙️_DEPLOY_ON_KOYEB-FF009D?style=for-the-badge&logo=koyeb)](https://app.koyeb.com)
-
-**Railway**  
-[![](https://img.shields.io/badge/🚄_DEPLOY_ON_RAILWAY-orange?style=for-the-badge&logo=railway&logoColor=white)](https://railway.app/new)
+[![](https://img.shields.io/badge/🔁_JOIN-TO-CGANNEL-FF4500?style=for-the-badge&logo=github)](https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z)
 
 ---
 
