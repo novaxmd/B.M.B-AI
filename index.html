@@ -3,223 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>𝗡𝗢𝗩𝗔-𝗫𝗠𝗗</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>B.M.B-TECH WEBSITE</title>
   <style>
-    :root {
-      --text-color: #ffffff;
-      --border-color: rgba(0, 247, 255, 0.2);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: 'Inter', sans-serif;
-    }
-
     body {
-      background: #000;
-      color: var(--text-color);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      position: relative;
+      font-family: Arial, sans-serif;
+      background: url('IMAGES/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      margin: 0;
       padding: 20px;
     }
-
-    #matrixCanvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
-
-    .container {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      max-width: 400px;
-      background: rgba(0, 0, 0, 0.7);
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 0 25px rgba(0, 247, 255, 0.4);
-      border: 1px solid var(--border-color);
-      backdrop-filter: blur(8px);
-    }
-
-    .header {
+    h1 {
       text-align: center;
-      margin-bottom: 25px;
+      background: #000000aa;
+      padding: 15px;
+      border-radius: 10px;
     }
-
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 16px;
-      background: url('https://files.catbox.moe/391229.jpg') center/cover no-repeat;
-      border-radius: 50%;
-      animation: spinOnce 5s ease-in-out 1;
+    .section {
+      background: #000000c0;
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #00ffcc;
     }
-
-    @keyframes spinOnce {
-      0% {
-        transform: rotate(0deg) translateY(0);
-        box-shadow: 0 0 10px rgba(0, 247, 255, 0.8);
-      }
-      25% {
-        transform: rotate(90deg) translateY(-10px);
-      }
-      50% {
-        transform: rotate(180deg) translateY(0);
-        box-shadow: 0 0 25px rgba(0, 247, 255, 1);
-      }
-      75% {
-        transform: rotate(270deg) translateY(10px);
-      }
-      100% {
-        transform: rotate(360deg) translateY(0);
-        box-shadow: 0 0 10px rgba(0, 247, 255, 0.8);
-      }
+    input, button {
+      padding: 10px;
+      width: 100%;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
     }
-
-    .title {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      background: linear-gradient(270deg, #ffffff, #00cfff, #0077ff, #00f7ff);
-      background-size: 1000% 1000%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradientText 5s ease infinite;
-    }
-
-    @keyframes gradientText {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin-top: 25px;
-    }
-
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px;
-      font-size: 15px;
+    button {
+      background: #00ffcc;
+      color: #000;
       font-weight: bold;
-      border: 1.5px solid var(--border-color);
-      border-radius: 12px;
-      background: rgba(255,255,255,0.1);
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 15px;
+    }
+    .thumbnail {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .download-link {
+      background: #00ffcc;
+      color: #000;
+      padding: 10px;
+      display: inline-block;
+      border-radius: 5px;
+      margin-top: 10px;
       text-decoration: none;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      background-image: linear-gradient(90deg, #00cfff, #00eaff, #00aaff, #00cfff);
-      background-size: 400%;
-      animation: animateText 3s linear infinite, bounceUpDown 2s ease-in-out infinite;
-    }
-
-    @keyframes animateText {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    @keyframes bounceUpDown {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
-
-    .button i {
-      color: #00f7ff;
-    }
-
-    .button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 25px;
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.5);
     }
   </style>
 </head>
 <body>
-  <canvas id="matrixCanvas"></canvas>
-  <div class="container">
-    <div class="header">
-      <div class="logo"></div>
-      <h1 class="title">NOVA-XMD SESSION_ID</h1>
-    </div>
-    <div class="button-container">
-      <a href="/qr" class="button" target="_blank">
-        <i class="fas fa-qrcode"></i> QR CODE
-      </a>
-      <a href="/pair" class="button" target="_blank">
-        <i class="fas fa-link"></i> PAIRING CODE
-      </a>
-      <a href="https://github.com/novaxmd/NOVA-XMD/fork" class="button" target="_blank">
-        <i class="fas fa-code-branch"></i> FORK BOT
-      </a>
-      <a href="https://github.com/novaxmd" class="button" target="_blank">
-        <i class="fas fa-user-plus"></i> FOLLOWS DEV
-      </a>
-      <a href="https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z" class="button" target="_blank">
-        <i class="fab fa-whatsapp"></i> WHATSAPP
-      </a>
-      <a href="https://github.com/novaxmd/NOVA-XMD" class="button" target="_blank">
-        <i class="fas fa-bug"></i> REPORT ERROR
-      </a>
-    </div>
-    <div class="footer">
-      𝗡𝗢𝗩𝗔-𝗫𝗠𝗗 &copy; <span id="currentYear"></span>
-    </div>
+  <h1>B.M.B-TECH WEBSITE</h1>
+
+  <!-- Facebook Downloader -->
+  <div class="section">
+    <h2>Download Facebook Video</h2>
+    <input type="text" id="facebookUrl" placeholder="Paste Facebook video URL...">
+    <button onclick="downloadFacebook()">Download</button>
+    <div id="facebookResult" class="result"></div>
+  </div>
+
+  <!-- YouTube Downloader -->
+  <div class="section">
+    <h2>Search and Download YouTube</h2>
+    <input type="text" id="ytQuery" placeholder="Enter song or video name...">
+    <button onclick="handleDownload('audio')">Download MP3</button>
+    <button onclick="handleDownload('video')">Download MP4</button>
+    <div id="errorMsg"></div>
+    <div id="resultContainer" class="result"></div>
+  </div>
+
+  <!-- App Downloader (search-based) -->
+  <div class="section">
+    <h2>Search App (Play Store)</h2>
+    <input type="text" id="appName" placeholder="Enter App Name...">
+    <button onclick="searchApp()">Search</button>
+    <div id="appResult" class="result"></div>
   </div>
 
   <script>
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-    const canvas = document.getElementById("matrixCanvas");
-    const ctx = canvas.getContext("2d");
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
-    const fontSize = 14;
-    const columns = canvas.width / fontSize;
-    const drops = Array.from({ length: columns }).fill(1);
-
-    function drawMatrix() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#00f7ff";
-      ctx.font = fontSize + "px monospace";
-      for (let i = 0; i < drops.length; i++) {
-        const text = letters.charAt(Math.floor(Math.random() * letters.length));
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
+    // FACEBOOK VIDEO
+    async function downloadFacebook() {
+      const url = document.getElementById('facebookUrl').value;
+      const resultDiv = document.getElementById('facebookResult');
+      resultDiv.innerHTML = "Processing...";
+      try {
+        const res = await fetch(`https://api.davidcyriltech.my.id/download/facebook?url=${encodeURIComponent(url)}`);
+        const data = await res.json();
+        if (data?.result?.url) {
+          resultDiv.innerHTML = `<a class="download-link" href="${data.result.url}" target="_blank">⬇ Download Video</a>`;
+        } else {
+          resultDiv.innerHTML = "Failed to get link.";
         }
-        drops[i]++;
+      } catch (err) {
+        resultDiv.innerHTML = "Error: " + err.message;
       }
     }
-    setInterval(drawMatrix, 33);
+
+    // YOUTUBE MP3/MP4
+    async function handleDownload(type) {
+      const query = document.getElementById("ytQuery").value.trim();
+      const resultContainer = document.getElementById("resultContainer");
+      const errorMsg = document.getElementById("errorMsg");
+      resultContainer.innerHTML = '';
+      errorMsg.textContent = '';
+
+      if (!query) {
+        errorMsg.textContent = "❌ Please enter a YouTube video name.";
+        return;
+      }
+
+      try {
+        const searchRes = await fetch(`https://my-rest-apis-six.vercel.app/yts?query=${encodeURIComponent(query)}`);
+        const searchJson = await searchRes.json();
+        if (!searchJson.results || searchJson.results.length === 0) {
+          throw new Error("No results found.");
+        }
+
+        const video = searchJson.results[0];
+        const videoUrl = video.url;
+
+        const endpoint = type === 'audio' 
+          ? `https://apis.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`
+          : `https://apis.davidcyriltech.my.id/download/ytmp4?url=${encodeURIComponent(videoUrl)}`;
+
+        const downloadRes = await fetch(endpoint);
+        const downloadJson = await downloadRes.json();
+
+        if (!downloadJson.success || !downloadJson.result?.download_url) {
+          throw new Error("Download not available.");
+        }
+
+        const d = downloadJson.result;
+        resultContainer.innerHTML = `
+          <div class="result">
+            <img class="thumbnail" src="${d.thumbnail}" alt="Thumbnail">
+            <div class="info">
+              <h2>${d.title}</h2>
+              <p><strong>Type:</strong> ${d.type}</p>
+              <p><strong>Quality:</strong> ${d.quality}</p>
+              <a class="download-link" href="${d.download_url}" target="_blank" download>
+                ⬇ Download ${type === 'audio' ? 'MP3' : 'MP4'}
+              </a>
+            </div>
+          </div>
+        `;
+      } catch (err) {
+        errorMsg.textContent = "❌ " + err.message;
+      }
+    }
+
+    // APP Search (placeholder)
+    async function searchApp() {
+      const name = document.getElementById("appName").value.trim();
+      const result = document.getElementById("appResult");
+      result.innerHTML = "🔍 Searching...";
+      if (!name) return result.innerHTML = "❌ Enter app name";
+      result.innerHTML = `Sorry, App search API not connected yet. Please search manually.`;
+    }
   </script>
+
 </body>
-  </html>
+</html>
