@@ -15,9 +15,7 @@
 </
 
 
-<p align="center">
-  <img src="https://files.catbox.moe/bgjml6.jpg" width="270" style="border-radius: 20px;"/>
-  </p>
+
   <p align="center">
   <img
 src="https://files.catbox.moe/jy7w4a.jpg"/>
