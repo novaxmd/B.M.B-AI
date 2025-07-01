@@ -31,7 +31,7 @@
 
 ### 🔃 ➋ WHATSAPP CHANNEL
 
-[![](https://img.shields.io/badge/🔁_JOIN-TO-CGANNEL-FF4500?style=for-the-badge&logo=github)](https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z)
+[![](https://img.shields.io/badge/🔁CHANNEL-FF4500?style=for-the-badge&logo=github)](https://whatsapp.com/channel/0029VawO6hgF6sn7k3SuVU3z)
 
 ---
 
